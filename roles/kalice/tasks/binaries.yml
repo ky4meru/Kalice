@@ -1,0 +1,28 @@
+
+- name: Download Linux binaries
+  ansible.builtin.get_url:
+    url: "{{ item }}"
+    dest: "/usr/local/bin/{{ item | basename | lower }}"
+    mode: '0755'
+  loop: "{{ linux_binaries }}"
+
+- name: Download and unarchive Linux zipped binaries
+  ansible.builtin.unarchive:
+    src: "{{ item }}"
+    dest: /usr/local/bin/
+    remote_src: yes
+  loop: "{{ linux_zipped_binaries }}"
+
+- name: Download Windows binaries
+  ansible.builtin.get_url:
+    url: "{{ item }}"
+    dest: "/usr/share/windows-resources/binaries/{{ item | basename | lower }}"
+    mode: '0755'
+  loop: "{{ windows_binaries }}"
+
+- name: Download and unarchive Windows zipped binaries
+  ansible.builtin.unarchive:
+    src: "{{ item }}"
+    dest: /usr/share/windows-resources/binaries/
+    remote_src: yes
+  loop: "{{ windows_zipped_binaries }}"

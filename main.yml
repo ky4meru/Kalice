@@ -1,0 +1,4 @@
+- name: Kalice - Offensive Kali Linux Configuration
+  hosts: localhost
+  roles:
+    - kalice

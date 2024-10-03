@@ -1,0 +1,82 @@
+- name: Set timezone to Europe/Paris
+  community.general.timezone:
+    name: Europe/Paris
+
+- name: Update apt packages
+  ansible.builtin.apt:
+    update_cache: true
+
+- name: Ensure apt-transport-https package is installed
+  ansible.builtin.apt:
+    name: apt-transport-https
+    state: present
+
+- name: Configure sources.list to use HTTPS
+  ansible.builtin.replace:
+    path: /etc/apt/sources.list
+    regexp: '^(deb\s+)http(://http.kali.org/kali.*)$'
+    replace: '\1https\2'
+
+- name: Upgrade apt packages
+  ansible.builtin.apt:
+    upgrade: safe
+
+- name: Install useful apt packages
+  ansible.builtin.apt:
+    pkg: "{{ item }}"
+  loop: "{{ apt_packages }}"
+
+- name: Remove apt packages that are no longer required and purge their configuration files
+  ansible.builtin.apt:
+    autoremove: yes
+    purge: true
+
+- name: Clean apt packages
+  ansible.builtin.apt:
+    autoclean: yes
+
+- name: Enable firewall
+  community.general.ufw:
+    state: enabled
+    policy: deny
+
+- name: Enable auditd
+  ansible.builtin.systemd_service:
+    name: auditd
+    enabled: true
+    masked: no
+
+- name: Enable lightdm
+  ansible.builtin.systemd_service:
+    name: lightdm
+    enabled: true
+    masked: no
+
+- name: Download The Ultimate vimrc
+  ansible.builtin.git:
+    repo: 'https://github.com/amix/vimrc.git'
+    dest: /opt/vim_runtime
+    depth: 1
+
+- name: Install The Ultimate vimrc
+  ansible.builtin.shell: sh /opt/vim_runtime/install_awesome_parameterized.sh /opt/vim_runtime --all
+
+- name: Set vim as default editor
+  community.general.alternatives:
+    name: editor
+    path: /usr/bin/vim.basic
+
+- name: Copy lightdm-gtk-greeter configuration
+  ansible.builtin.copy:
+    src: lightdm/lightdm-gtk-greeter.conf
+    dest: /etc/lightdm/lightdm-gtk-greeter.conf
+
+- name: Copy lightdm configuration
+  ansible.builtin.copy:
+    src: lightdm/lightdm.conf
+    dest: /etc/lightdm/lightdm.conf
+
+- name: Copy images
+  ansible.builtin.copy:
+    src: images/
+    dest: /usr/share/images/

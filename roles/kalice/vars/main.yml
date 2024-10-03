@@ -1,0 +1,156 @@
+# Installed with apt
+apt_packages:
+  - auditd
+  - awscli
+  - azure-cli
+  - bettercap
+  - build-essential
+  - bloodhound
+  - bloodhound.py
+  - brutespray
+  - burpsuite
+  - certipy-ad
+  - chisel
+  - chkrootkit
+  - chromium
+  - crackmapexec
+  - cryptsetup
+  - dirsearch
+  - dnsrecon
+  - docker.io
+  - enum4linux-ng
+  - evil-winrm
+  - feh
+  - firefox-esr
+  - flameshot
+  - ffuf
+  - git
+  - gitleaks
+  - gobuster
+  - golang
+  - gowitness
+  - hashcat
+  - htop
+  - hydra
+  - impacket-scripts
+  - i3
+  - john
+  - kali-undercover
+  - lightdm
+  - lynis
+  - maltego
+  - masscan
+  - metasploit-framework
+  - mimikatz
+  - mitm6
+  - naabu
+  - neo4j
+  - netexec
+  - nmap
+  - nuclei
+  - onesixtyone
+  - peass
+  - picom
+  - pipx
+  - powersploit
+  - proxychains4
+  - python2.7
+  - python3
+  - python3-pip
+  - python3-venv
+  - responder
+  - rkhunter
+  - seclists
+  - shellter
+  - smbclient
+  - smbmap
+  - snmp
+  - snmp-mibs-downloader
+  - spiderfoot
+  - sqlmap
+  - ssh-audit
+  - sslscan
+  - subfinder
+  - sublist3r
+  - testssl.sh
+  - theharvester
+  - tree
+  - ufw
+  - unix-privesc-check
+  - veil
+  - vim
+  - windows-binaries
+  - wireshark
+  - wordlists
+  - wpscan
+  - xinit
+
+# Installed with dpkg
+deb_packages:
+  - 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
+
+# Installed with pipx
+pipx_packages:
+  - 'https://github.com/p0dalirius/ApacheTomcatScanner'
+  - 'https://github.com/soxoj/maigret'
+  - 'https://github.com/megadose/holehe'
+  - 'https://github.com/khast3x/h8mail'
+  - 'https://github.com/yaap7/ldapsearch-ad'
+
+# Cloned into /usr/share/windows-resources/
+windows_repositories:
+  - 'https://github.com/Hagrid29/AbuseAzureAPIPermissions'
+  - 'https://github.com/61106960/adPEAS'
+  - 'https://github.com/adrecon/ADRecon'
+  - 'https://github.com/dafthack/DomainPasswordSpray'
+  - 'https://github.com/411Hall/JAWS'
+  - 'https://github.com/leoloobeek/LAPSToolkit'
+  - 'https://github.com/dafthack/MailSniper'
+  - 'https://github.com/S3cur3Th1sSh1t/WinPwn'
+  - 'https://github.com/Flangvik/SharpCollection'
+  - 'https://github.com/topotam/PetitPotam'
+
+# Stored into /usr/share/windows-resources/binaries/
+windows_binaries:
+  - 'https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe'
+  - 'https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.6/LaZagne.exe'
+  - 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_windows_amd64.exe'
+  - 'https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe'
+  - 'https://github.com/skahwah/SQLRecon/releases/download/v3.8/SQLRecon.exe'
+  - 'https://github.com/ly4k/SpoolFool/raw/refs/heads/main/SpoolFool.exe'
+  - 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe'
+
+# Stored into /usr/share/windows-resources/binaries/
+windows_zipped_binaries:
+  - 'https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_windows_amd64_1.7.0.zip'
+  - 'https://github.com/BloodHoundAD/AzureHound/releases/download/v2.2.1/azurehound-windows-amd64.zip'
+  - 'https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip'
+
+# Cloned into /usr/share/
+linux_repositories:
+  - 'https://github.com/ihebski/DefaultCreds-cheat-sheet'
+  - 'https://github.com/p0dalirius/Tomcat-webshell-application'
+  - 'https://github.com/ly4k/PrintNightmare'
+  - 'https://github.com/Ridter/noPac'
+  - 'https://github.com/dirkjanm/CVE-2020-1472'
+  - 'https://github.com/MattKeeley/Spoofy'
+  - 'https://github.com/Wh04m1001/DFSCoerce'
+  - 'https://github.com/topotam/PetitPotam'
+  - 'https://github.com/epi052/cve-2018-15473'
+
+# Stored into /usr/local/bin/
+linux_binaries:
+  - 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64'
+  - 'https://gist.githubusercontent.com/superkojiman/11076951/raw/74f3de7740acb197ecfa8340d07d3926a95e5d46/namemash.py'
+
+# Stored into /usr/local/bin/
+linux_zipped_binaries:
+  - 'https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip'
+  - 'https://github.com/BloodHoundAD/AzureHound/releases/download/v2.2.1/azurehound-linux-amd64.zip'
+
+# Files to remove before ending the playbook
+files_to_remove:
+  - /usr/share/windows-binaries/README.md
+  - /usr/share/windows-binaries/LICENSE.txt
+  - /usr/local/bin/README.md
+  - /usr/local/bin/LICENSE.txt

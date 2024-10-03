@@ -1,0 +1,5 @@
+- name: Remove dummy files
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: absent
+  loop: "{{ files_to_remove }}"

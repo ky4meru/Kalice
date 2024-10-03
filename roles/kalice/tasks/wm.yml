@@ -1,0 +1,14 @@
+- name: Copy i3 configuration
+  ansible.builtin.copy:
+    src: i3
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.config/"
+
+- name: Copy i3status configuration
+  ansible.builtin.copy:
+    src: i3status
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.config/"
+
+- name: Copy picom configuration
+  ansible.builtin.copy:
+    src: picom
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.config/"

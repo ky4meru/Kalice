@@ -1,0 +1,5 @@
+- name: Install pipx packages
+  community.general.pipx:
+    name: "{{ item | basename | lower }}"
+    source: "git+{{ item }}"
+  loop: "{{ pipx_packages }}"

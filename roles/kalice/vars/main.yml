@@ -109,6 +109,7 @@ windows_repositories:
   - 'https://github.com/S3cur3Th1sSh1t/WinPwn'
   - 'https://github.com/Flangvik/SharpCollection'
   - 'https://github.com/topotam/PetitPotam'
+  - 'https://github.com/dirkjanm/krbrelayx'
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_binaries:

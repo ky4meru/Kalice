@@ -96,6 +96,7 @@ pipx_packages:
   - 'https://github.com/megadose/holehe'
   - 'https://github.com/khast3x/h8mail'
   - 'https://github.com/yaap7/ldapsearch-ad'
+  - 'https://github.com/blacklanternsecurity/MANSPIDER'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:

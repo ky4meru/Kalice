@@ -1,5 +1,6 @@
 # Installed with apt
 apt_packages:
+  - antiword
   - auditd
   - awscli
   - azure-cli
@@ -72,6 +73,7 @@ apt_packages:
   - sslscan
   - subfinder
   - sublist3r
+  - tesseract-ocr
   - testssl.sh
   - theharvester
   - tree

@@ -87,6 +87,7 @@ apt_packages:
   - wordlists
   - wpscan
   - xinit
+  - xfreerdp
 
 # Installed with dpkg
 deb_packages:

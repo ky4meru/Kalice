@@ -20,7 +20,7 @@ When executed, *Kalice* playbook will perform following operations.
 - Enable local firewall in `deny` mode, `auditd` and `lightdm`.
 - Configure `vim` as default editor.
 - Configure window manager appearance - *for `i3` usage only*.
-- Download and install a multitude of offensive tools - *see [./roles/kalice/vars/main.yml]()*.
+- Download and install a multitude of offensive tools - *see [./roles/kalice/vars/main.yml](./roles/kalice/vars/main.yml)*.
 
 ## License
 

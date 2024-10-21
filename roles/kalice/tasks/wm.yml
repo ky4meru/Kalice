@@ -12,3 +12,13 @@
   ansible.builtin.copy:
     src: picom
     dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.config/"
+
+- name: Ensure CRLF is not present in configuration files
+  ansible.builtin.replace:
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.config/{{ item }}"
+    regexp: "\r$"
+    replace: ""
+  loop:
+    - "i3/config"
+    - "i3status/config"
+    - "picom/picom.conf"

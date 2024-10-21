@@ -22,9 +22,10 @@ apt_packages:
   - enum4linux-ng
   - evil-winrm
   - feh
+  - ffuf
   - firefox-esr
   - flameshot
-  - ffuf
+  - freerdp2-x11
   - git
   - gitleaks
   - gobuster
@@ -87,7 +88,6 @@ apt_packages:
   - wordlists
   - wpscan
   - xinit
-  - xfreerdp
 
 # Installed with dpkg
 deb_packages:

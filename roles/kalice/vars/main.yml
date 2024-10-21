@@ -107,6 +107,7 @@ pipx_packages:
   - 'https://github.com/blacklanternsecurity/MANSPIDER'
   - 'https://github.com/p0dalirius/Coercer'
   - 'https://github.com/CravateRouge/bloodyAD'
+  - 'https://github.com/ShutdownRepo/smartbrute'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:

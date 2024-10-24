@@ -80,3 +80,17 @@
   ansible.builtin.copy:
     src: images/
     dest: /usr/share/images/
+
+#- name: Download wordlists
+#  ansible.builtin.get_url:
+#    url: "{{ item }}"
+#    dest: "/usr/share/wordlist/{{ item | basename | lower }}"
+#    mode: '0644'
+#  loop: "{{ wordlists }}"
+
+- name: Download hashcat rules
+  ansible.builtin.get_url:
+    url: "{{ item }}"
+    dest: "/usr/share/hashcat/rules/{{ item | basename | lower }}"
+    mode: '0644'
+  loop: "{{ hashcat_rules }}"

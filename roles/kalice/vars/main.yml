@@ -133,6 +133,7 @@ windows_binaries:
   - 'https://github.com/ly4k/SpoolFool/raw/refs/heads/main/SpoolFool.exe'
   - 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe'
   - 'https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.7/bloodyAD.exe'
+  - 'https://github.com/SnaffCon/Snaffler/releases/download/1.0.179/Snaffler.exe'
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_zipped_binaries:
@@ -140,6 +141,8 @@ windows_zipped_binaries:
   - 'https://github.com/BloodHoundAD/AzureHound/releases/download/v2.2.1/azurehound-windows-amd64.zip'
   - 'https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip'
   - 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
+  - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.3.0/nxc.exe.zip'
+  - 'https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.8/SharpHound-v2.5.8.zip'
 
 # Cloned into /usr/share/
 linux_repositories:
@@ -172,3 +175,11 @@ files_to_remove:
   - /usr/share/windows-binaries/LICENSE.txt
   - /usr/local/bin/README.md
   - /usr/local/bin/LICENSE.txt
+
+# Stored in /usr/share/wordlists/
+wordlists:
+  - https://crackstation.net/files/crackstation.txt.gz
+
+# Stored into /usr/share/hashcat/rules/
+hashcat_rules:
+  - https://raw.githubusercontent.com/stealthsploit/OneRuleToRuleThemStill/refs/heads/main/OneRuleToRuleThemStill.rule

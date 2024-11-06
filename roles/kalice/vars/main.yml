@@ -39,6 +39,7 @@ apt_packages:
   - john
   - kali-undercover
   - lightdm
+  - ltrace
   - lynis
   - maltego
   - masscan

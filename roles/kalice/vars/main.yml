@@ -135,6 +135,7 @@ windows_binaries:
   - 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe'
   - 'https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.7/bloodyAD.exe'
   - 'https://github.com/SnaffCon/Snaffler/releases/download/1.0.179/Snaffler.exe'
+  - 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_windows_amd64.exe'
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_zipped_binaries:
@@ -164,6 +165,7 @@ linux_binaries:
   - 'https://gist.githubusercontent.com/superkojiman/11076951/raw/74f3de7740acb197ecfa8340d07d3926a95e5d46/namemash.py'
   - 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py'
   - 'https://raw.githubusercontent.com/tenable/poc/refs/heads/master/Solarwinds/Dameware/dwrcs_dwDrvInst_rce.py'
+  - 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_linux_amd64'
 
 # Stored into /usr/local/bin/
 linux_zipped_binaries:

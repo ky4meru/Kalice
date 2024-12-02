@@ -89,6 +89,7 @@ apt_packages:
   - wordlists
   - wpscan
   - xinit
+  - yara
 
 # Installed with dpkg
 deb_packages:
@@ -109,6 +110,7 @@ pipx_packages:
   - 'https://github.com/p0dalirius/Coercer'
   - 'https://github.com/CravateRouge/bloodyAD'
   - 'https://github.com/ShutdownRepo/smartbrute'
+  - 'https://github.com/0xZDH/o365spray'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -136,6 +138,7 @@ windows_binaries:
   - 'https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.7/bloodyAD.exe'
   - 'https://github.com/SnaffCon/Snaffler/releases/download/1.0.179/Snaffler.exe'
   - 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_windows_amd64.exe'
+  - 'https://raw.githubusercontent.com/dafthack/MSOLSpray/refs/heads/master/MSOLSpray.ps1'
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_zipped_binaries:
@@ -145,6 +148,7 @@ windows_zipped_binaries:
   - 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
   - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.3.0/nxc.exe.zip'
   - 'https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.8/SharpHound-v2.5.8.zip'
+  - 'https://github.com/VirusTotal/yara/releases/download/v4.5.2/yara-v4.5.2-2326-win64.zip'
 
 # Cloned into /usr/share/
 linux_repositories:

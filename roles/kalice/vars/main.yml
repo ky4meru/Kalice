@@ -68,6 +68,7 @@ apt_packages:
   - shellter
   - smbclient
   - smbmap
+  - smtp-user-enum
   - snmp
   - snmp-mibs-downloader
   - spiderfoot
@@ -162,6 +163,7 @@ linux_repositories:
   - 'https://github.com/topotam/PetitPotam'
   - 'https://github.com/epi052/cve-2018-15473'
   - 'https://github.com/ShutdownRepo/pywhisker'
+  - 'https://github.com/testanull/ProxyNotShell-PoC'
 
 # Stored into /usr/local/bin/
 linux_binaries:

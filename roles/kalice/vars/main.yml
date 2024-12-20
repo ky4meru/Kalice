@@ -91,6 +91,7 @@ apt_packages:
   - wpscan
   - xinit
   - yara
+  - zaproxy
 
 # Installed with dpkg
 deb_packages:

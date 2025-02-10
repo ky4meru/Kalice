@@ -7,6 +7,7 @@
 Install `ansible` and run the playbook.
 
 ```bash
+sudo apt update -y
 sudo apt install -y ansible
 ansible-playbook main.yml
 ```

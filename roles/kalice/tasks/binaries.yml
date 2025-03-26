@@ -1,8 +1,7 @@
-
 - name: Download Linux binaries
   ansible.builtin.get_url:
-    url: "{{ item }}"
-    dest: "/usr/local/bin/{{ item | basename | lower }}"
+    url: "{{ item.url }}"
+    dest: "/usr/local/bin/{{ item.name }}"
     mode: '0755'
   loop: "{{ linux_binaries }}"
 
@@ -15,8 +14,8 @@
 
 - name: Download Windows binaries
   ansible.builtin.get_url:
-    url: "{{ item }}"
-    dest: "/usr/share/windows-resources/binaries/{{ item | basename | lower }}"
+    url: "{{ item.url }}"
+    dest: "/usr/share/windows-resources/binaries/{{ item.name }}"
     mode: '0755'
   loop: "{{ windows_binaries }}"
 

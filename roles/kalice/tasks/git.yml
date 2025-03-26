@@ -1,11 +1,11 @@
 - name: Download Linux git repositories
   ansible.builtin.git:
-    repo: "{{ item }}"
-    dest: "/usr/share/{{ item | basename | lower }}"
+    repo: "{{ item.url }}"
+    dest: "/usr/share/{{ item.name }}"
   loop: "{{ linux_repositories }}"
 
 - name: Download Windows git repositories
   ansible.builtin.git:
-    repo: "{{ item }}"
-    dest: "/usr/share/windows-resources/{{ item | basename | lower }}"
+    repo: "{{ item.url }}"
+    dest: "/usr/share/windows-resources/{{ item.name }}"
   loop: "{{ windows_repositories }}"

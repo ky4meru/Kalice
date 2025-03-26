@@ -2,16 +2,9 @@
   become: true
   ansible.builtin.import_tasks: system.yml
 
-- name: Window Manager configuration
-  ansible.builtin.import_tasks: wm.yml
-
 - name: Git repositories
   become: true
   ansible.builtin.import_tasks: git.yml
-
-- name: Deb packages
-  become: true
-  ansible.builtin.import_tasks: deb.yml
 
 - name: Python packages
   ansible.builtin.import_tasks: python.yml

@@ -1,7 +1,3 @@
-- name: Set timezone to Europe/Paris
-  community.general.timezone:
-    name: Europe/Paris
-
 - name: Update apt packages
   ansible.builtin.apt:
     update_cache: true
@@ -35,20 +31,13 @@
   ansible.builtin.apt:
     autoclean: yes
 
-- name: Enable firewall
-  community.general.ufw:
-    state: enabled
-    policy: deny
+- name: Set timezone to Europe/Paris
+  community.general.timezone:
+  name: Europe/Paris
 
 - name: Enable auditd
   ansible.builtin.systemd_service:
     name: auditd
-    enabled: true
-    masked: no
-
-- name: Enable lightdm
-  ansible.builtin.systemd_service:
-    name: lightdm
     enabled: true
     masked: no
 
@@ -66,31 +55,9 @@
     name: editor
     path: /usr/bin/vim.basic
 
-- name: Copy lightdm-gtk-greeter configuration
-  ansible.builtin.copy:
-    src: lightdm/lightdm-gtk-greeter.conf
-    dest: /etc/lightdm/lightdm-gtk-greeter.conf
-
-- name: Copy lightdm configuration
-  ansible.builtin.copy:
-    src: lightdm/lightdm.conf
-    dest: /etc/lightdm/lightdm.conf
-
-- name: Copy images
-  ansible.builtin.copy:
-    src: images/
-    dest: /usr/share/images/
-
-#- name: Download wordlists
-#  ansible.builtin.get_url:
-#    url: "{{ item }}"
-#    dest: "/usr/share/wordlist/{{ item | basename | lower }}"
-#    mode: '0644'
-#  loop: "{{ wordlists }}"
-
 - name: Download hashcat rules
   ansible.builtin.get_url:
-    url: "{{ item }}"
-    dest: "/usr/share/hashcat/rules/{{ item | basename | lower }}"
+    url: "{{ item.url }}"
+    dest: "/usr/share/hashcat/rules/{{ item.name }}"
     mode: '0644'
   loop: "{{ hashcat_rules }}"

@@ -33,7 +33,7 @@
 
 - name: Set timezone to Europe/Paris
   community.general.timezone:
-  name: Europe/Paris
+    name: Europe/Paris
 
 - name: Enable auditd
   ansible.builtin.systemd_service:

@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-Install `ansible` and run the playbook.
+Install `ansible` then run the playbook.
 
 ```bash
 sudo apt update -y
@@ -18,7 +18,7 @@ When executed, *Kalice* playbook will perform following operations.
 
 - Update, upgrade and clean `apt` packages.
 - Set timezone.
-- Enable local firewall in `deny` mode, `auditd` and `lightdm`.
+- Enable `auditd`.
 - Configure `vim` as default editor.
 - Download and install a multitude of offensive tools - *see [./roles/kalice/vars/main.yml](./roles/kalice/vars/main.yml)*.
 

@@ -1,6 +1,8 @@
 # Installed with apt
 apt_packages:
   - antiword
+  - arping
+  - arp-scan
   - asciinema
   - auditd
   - awscli
@@ -11,6 +13,7 @@ apt_packages:
   - bloodhound.py
   - brutespray
   - burpsuite
+  - cargo
   - certipy-ad
   - chisel
   - chkrootkit
@@ -34,6 +37,8 @@ apt_packages:
   - golang
   - gowitness
   - hashcat
+  - hcxdumptool
+  - hcxtools
   - htop
   - hydra
   - impacket-scripts
@@ -51,7 +56,6 @@ apt_packages:
   - mitm6
   - naabu
   - neo4j
-  - netexec
   - nmap
   - nuclei
   - ollydbg
@@ -97,6 +101,7 @@ apt_packages:
   - wordlists
   - wpscan
   - xinit
+  - xtightvncviewer
   - yara
   - zaproxy
   - zenmap
@@ -115,13 +120,14 @@ pipx_packages:
   - 'https://github.com/soxoj/maigret'
   - 'https://github.com/megadose/holehe'
   - 'https://github.com/khast3x/h8mail'
-  - 'https://github.com/yaap6/ldapsearch-ad'
+  - 'https://github.com/yaap7/ldapsearch-ad'
   - 'https://github.com/blacklanternsecurity/MANSPIDER'
   - 'https://github.com/p0dalirius/Coercer'
   - 'https://github.com/CravateRouge/bloodyAD'
   - 'https://github.com/ShutdownRepo/smartbrute'
   - 'https://github.com/0xZDH/o365spray'
   - 'https://github.com/ShutdownRepo/pywhisker'
+  - 'https://github.com/Pennyw0rth/NetExec'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -155,13 +161,15 @@ windows_binaries:
 # Stored into /usr/share/windows-resources/binaries/
 windows_zipped_binaries:
   - 'https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_windows_amd64_1.7.0.zip'
-  - 'https://github.com/BloodHoundAD/AzureHound/releases/download/v2.2.1/azurehound-windows-amd64.zip'
+  - 'https://github.com/SpecterOps/AzureHound/releases/download/v2.3.1/AzureHound_v2.3.1_windows_amd64.zip'
   - 'https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip'
   - 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
   - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.3.0/nxc.exe.zip'
   - 'https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.8/SharpHound-v2.5.8.zip'
   - 'https://github.com/VirusTotal/yara/releases/download/v4.5.2/yara-v4.5.2-2326-win64.zip'
   - 'https://github.com/bee-san/RustScan/releases/download/2.4.1/x86_64-windows-rustscan.exe.zip'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_agent_0.7.5_windows_amd64.zip'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_windows_amd64.zip'
 
 # Cloned into /usr/share/
 linux_repositories:
@@ -196,8 +204,10 @@ linux_binaries:
 # Stored into /usr/local/bin/
 linux_zipped_binaries:
   - 'https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip'
-  - 'https://github.com/BloodHoundAD/AzureHound/releases/download/v2.2.1/azurehound-linux-amd64.zip'
+  - 'https://github.com/SpecterOps/AzureHound/releases/download/v2.3.1/AzureHound_v2.3.1_linux_amd64.zip'
   - 'https://github.com/bee-san/RustScan/releases/download/2.4.1/x86_64-linux-rustscan.tar.gz.zip'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_linux_amd64.tar.gz'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_agent_0.7.5_linux_amd64.tar.gz'
 
 # Files to remove before ending the playbook
 files_to_remove:

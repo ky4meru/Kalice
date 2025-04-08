@@ -1,6 +1,10 @@
-# Kalice :wine_glass:
+<p align="center"><img src="images/kalice.jpg" width="256" height="256" alt="Kalice"></p>
 
-*Kalice* is an [Ansible](https://www.ansible.com/) playbook to automate offensive Kali Linux configuration.
+<h1 align="center">Kalice</h1>
+
+<p align="center">Ansible playbook to automate offensive Kali Linux configuration</p>
+
+<hr>
 
 ## TL;DR
 

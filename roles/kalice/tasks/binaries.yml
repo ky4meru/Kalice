@@ -1,3 +1,11 @@
+- name: Download Golang binaries
+  ansible.builtin.shell: GO111MODULE=on GOBIN=/usr/local/bin go install -v {{ item }}
+  loop: "{{ go_packages }}"
+
+- name: Download Rust binaries
+  ansible.builtin.shell: cargo install --root /usr/local {{ item }}
+  loop: "{{ rust_packages }}"
+
 - name: Download Linux binaries
   ansible.builtin.get_url:
     url: "{{ item.url }}"

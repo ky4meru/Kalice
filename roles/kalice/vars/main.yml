@@ -128,6 +128,7 @@ pipx_packages:
   - 'https://github.com/0xZDH/o365spray'
   - 'https://github.com/ShutdownRepo/pywhisker'
   - 'https://github.com/Pennyw0rth/NetExec'
+  - 'https://github.com/bee-san/pyWhat'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:

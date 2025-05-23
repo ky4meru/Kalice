@@ -1,5 +1,6 @@
 # Installed with apt
 apt_packages:
+  - adb
   - antiword
   - arping
   - arp-scan
@@ -46,6 +47,7 @@ apt_packages:
   - hydra
   - impacket-scripts
   - i3
+  - jadx
   - john
   - kali-undercover
   - krb5-config
@@ -144,6 +146,8 @@ pipx_packages:
   - 'https://github.com/bee-san/pyWhat'
   - 'https://github.com/Orange-Cyberdefense/KeePwn.git'
   - 'https://github.com/garrettfoster13/pre2k'
+  - 'https://github.com/sensepost/objection'
+  - 'https://github.com/c3c/ADExplorerSnapshot.py'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -173,6 +177,7 @@ windows_binaries:
   - { name: 'MailSniper.ps1', url: 'https://raw.githubusercontent.com/dafthack/MailSniper/refs/heads/master/MailSniper.ps1' }
   - { name: 'WinPwn.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/WinPwn.ps1' }
   - { name: 'WinPwnOffline.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/Offline_WinPwn.ps1' }
+  - { name: 'PrivescCheck.ps1', url: 'https://raw.githubusercontent.com/itm4n/PrivescCheck/master/PrivescCheck.ps1' }
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_zipped_binaries:

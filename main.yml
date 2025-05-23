@@ -2,3 +2,4 @@
   hosts: localhost
   roles:
     - kalice
+  ignore_errors: true

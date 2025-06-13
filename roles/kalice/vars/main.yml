@@ -148,6 +148,7 @@ pipx_packages:
   - 'https://github.com/garrettfoster13/pre2k'
   - 'https://github.com/sensepost/objection'
   - 'https://github.com/c3c/ADExplorerSnapshot.py'
+  - 'https://github.com/skelsec/pypykatz'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:

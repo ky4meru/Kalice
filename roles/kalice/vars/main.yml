@@ -244,6 +244,8 @@ files_to_remove:
   - /usr/local/bin/README.md
   - /usr/local/bin/LICENSE.txt
   - /usr/local/bin/LICENSE
+  - /usr/share/windows-resources/LICENSE
+  - /usr/share/windows-resources/readme.txt
 
 # Stored into /usr/share/hashcat/rules/
 hashcat_rules:

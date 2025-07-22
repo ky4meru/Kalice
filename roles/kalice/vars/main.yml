@@ -182,6 +182,8 @@ windows_binaries:
   - { name: 'PrivescCheck.ps1', url: 'https://raw.githubusercontent.com/itm4n/PrivescCheck/master/PrivescCheck.ps1' }
   - { name: 'SharpExclusionFinder.exe', url: 'https://github.com/Friends-Security/SharpExclusionFinder/releases/download/v1/SharpExclusionFinder.exe' }
   - { name: 'Powermad.ps1', url: 'https://raw.githubusercontent.com/Kevin-Robertson/Powermad/refs/heads/master/Powermad.ps1' }
+  - { name: 'PsMapExec.ps1', url: 'https://raw.githubusercontent.com/The-Viper-One/PsMapExec/main/PsMapExec.ps1' }
+  - { name: 'Invoke-ADEnum.ps1', url: 'https://raw.githubusercontent.com/Leo4j/Invoke-ADEnum/refs/heads/main/Invoke-ADEnum.ps1' }
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_zipped_binaries:

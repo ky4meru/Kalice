@@ -1,4 +1,4 @@
-<p align="center"><img src="images/kalice.jpg" width="256" height="256" alt="Kalice"></p>
+<p align="center"><img src="images/kalice.png" width="256" height="256" alt="Kalice"></p>
 <h1 align="center">Kalice</h1>
 <p align="center">Ansible playbook to automate offensive Kali Linux configuration</p>
 <hr>

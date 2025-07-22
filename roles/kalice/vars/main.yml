@@ -241,13 +241,14 @@ linux_zipped_binaries:
 
 # Files to remove before ending the playbook
 files_to_remove:
-  - /usr/share/windows-binaries/README.md
+  - /usr/share/windows-binaries/LICENSE
   - /usr/share/windows-binaries/LICENSE.txt
+  - /usr/share/windows-binaries/psversion.txt
+  - /usr/share/windows-binaries/readme.txt
+  - /usr/share/windows-binaries/README.md
   - /usr/local/bin/README.md
   - /usr/local/bin/LICENSE.txt
   - /usr/local/bin/LICENSE
-  - /usr/share/windows-resources/LICENSE
-  - /usr/share/windows-resources/readme.txt
 
 # Stored into /usr/share/hashcat/rules/
 hashcat_rules:

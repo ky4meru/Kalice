@@ -113,6 +113,7 @@ apt_packages:
   - wordlists
   - wpscan
   - xinit
+  - xml-twig-tools
   - xtightvncviewer
   - yara
   - zaproxy

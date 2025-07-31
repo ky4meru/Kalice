@@ -21,6 +21,7 @@ apt_packages:
   - chromium
   - crackmapexec
   - cryptsetup
+  - csvkit
   - dirsearch
   - dnsenum
   - dnsrecon

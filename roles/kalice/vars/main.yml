@@ -82,6 +82,7 @@ apt_packages:
   - python3-pefile
   - python3-pip
   - python3-venv
+  - redis-tools
   - responder
   - rkhunter
   - seclists

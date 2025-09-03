@@ -153,6 +153,8 @@ pipx_packages:
   - 'https://github.com/sensepost/objection'
   - 'https://github.com/c3c/ADExplorerSnapshot.py'
   - 'https://github.com/skelsec/pypykatz'
+  - 'https://github.com/login-securite/DonPAPI'
+  - 'https://github.com/garrettfoster13/sccmhunter/'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -160,33 +162,34 @@ windows_repositories:
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_binaries:
-  - { name: 'JuicyPotato.exe', url: 'https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe' }
-  - { name: 'LaZagne.exe', url: 'https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.6/LaZagne.exe' }
-  - { name: 'Kerbrute.exe', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_windows_amd64.exe' }
-  - { name: 'GodPotato.exe', url: 'https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe' }
-  - { name: 'SQLRecon.exe', url: 'https://github.com/skahwah/SQLRecon/releases/download/v3.8/SQLRecon.exe' }
-  - { name: 'SpoolFool.exe', url: 'https://github.com/ly4k/SpoolFool/raw/refs/heads/main/SpoolFool.exe' }
-  - { name: 'PrintSpoofer.exe', url: 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe' }
-  - { name: 'BloodyAD.exe', url: 'https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.7/bloodyAD.exe' }
-  - { name: 'Snaffler.exe', url: 'https://github.com/SnaffCon/Snaffler/releases/download/1.0.179/Snaffler.exe' }
-  - { name: 'Mangle.exe', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_windows_amd64.exe' }
-  - { name: 'MSOLSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/MSOLSpray/refs/heads/master/MSOLSpray.ps1' }
-  - { name: 'PetitPotam.exe', url: 'https://github.com/topotam/PetitPotam/raw/refs/heads/main/PetitPotam.exe' }
   - { name: 'AbuseAzureAPIPermissions.ps1', url: 'https://github.com/Hagrid29/AbuseAzureAPIPermissions/raw/refs/heads/main/AbuseAzureAPIPermissions.ps1' }
   - { name: 'ADPeas.ps1', url: 'https://github.com/61106960/adPEAS/raw/refs/heads/main/adPEAS.ps1' }
   - { name: 'ADPeasLight.ps1', url: 'https://github.com/61106960/adPEAS/raw/refs/heads/main/adPEAS-Light.ps1' }
   - { name: 'ADRecon.ps1', url: 'https://raw.githubusercontent.com/adrecon/ADRecon/refs/heads/master/ADRecon.ps1' }
+  - { name: 'BloodyAD.exe', url: 'https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.7/bloodyAD.exe' }
   - { name: 'DomainPasswordSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/refs/heads/master/DomainPasswordSpray.ps1' }
+  - { name: 'GodPotato.exe', url: 'https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe' }
+  - { name: 'Invoke-ADEnum.ps1', url: 'https://raw.githubusercontent.com/Leo4j/Invoke-ADEnum/refs/heads/main/Invoke-ADEnum.ps1' }
   - { name: 'JAWSEnum.ps1', url: 'https://raw.githubusercontent.com/411Hall/JAWS/refs/heads/master/jaws-enum.ps1' }
+  - { name: 'JuicyPotato.exe', url: 'https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe' }
+  - { name: 'Kerbrute.exe', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_windows_amd64.exe' }
   - { name: 'LAPSToolkit.ps1', url: 'https://raw.githubusercontent.com/leoloobeek/LAPSToolkit/refs/heads/master/LAPSToolkit.ps1' }
+  - { name: 'LaZagne.exe', url: 'https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.6/LaZagne.exe' }
   - { name: 'MailSniper.ps1', url: 'https://raw.githubusercontent.com/dafthack/MailSniper/refs/heads/master/MailSniper.ps1' }
+  - { name: 'Mangle.exe', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_windows_amd64.exe' }
+  - { name: 'MSOLSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/MSOLSpray/refs/heads/master/MSOLSpray.ps1' }
+  - { name: 'PetitPotam.exe', url: 'https://github.com/topotam/PetitPotam/raw/refs/heads/main/PetitPotam.exe' }
+  - { name: 'PointAndPrint.ps1', url: 'https://github.com/itm4n/PrivescCheck/releases/download/2025.09.01-1/PointAndPrint.ps1' }
+  - { name: 'Powermad.ps1', url: 'https://raw.githubusercontent.com/Kevin-Robertson/Powermad/refs/heads/master/Powermad.ps1' }
+  - { name: 'PrintSpoofer.exe', url: 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe' }
+  - { name: 'PrivescCheck.ps1', url: 'https://github.com/itm4n/PrivescCheck/releases/download/2025.09.01-1/PrivescCheck.ps1' }
+  - { name: 'PsMapExec.ps1', url: 'https://raw.githubusercontent.com/The-Viper-One/PsMapExec/main/PsMapExec.ps1' }
+  - { name: 'SharpExclusionFinder.exe', url: 'https://github.com/Friends-Security/SharpExclusionFinder/releases/download/v1/SharpExclusionFinder.exe' }
+  - { name: 'Snaffler.exe', url: 'https://github.com/SnaffCon/Snaffler/releases/download/1.0.179/Snaffler.exe' }
+  - { name: 'SpoolFool.exe', url: 'https://github.com/ly4k/SpoolFool/raw/refs/heads/main/SpoolFool.exe' }
+  - { name: 'SQLRecon.exe', url: 'https://github.com/skahwah/SQLRecon/releases/download/v3.8/SQLRecon.exe' }
   - { name: 'WinPwn.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/WinPwn.ps1' }
   - { name: 'WinPwnOffline.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/Offline_WinPwn.ps1' }
-  - { name: 'PrivescCheck.ps1', url: 'https://raw.githubusercontent.com/itm4n/PrivescCheck/master/PrivescCheck.ps1' }
-  - { name: 'SharpExclusionFinder.exe', url: 'https://github.com/Friends-Security/SharpExclusionFinder/releases/download/v1/SharpExclusionFinder.exe' }
-  - { name: 'Powermad.ps1', url: 'https://raw.githubusercontent.com/Kevin-Robertson/Powermad/refs/heads/master/Powermad.ps1' }
-  - { name: 'PsMapExec.ps1', url: 'https://raw.githubusercontent.com/The-Viper-One/PsMapExec/main/PsMapExec.ps1' }
-  - { name: 'Invoke-ADEnum.ps1', url: 'https://raw.githubusercontent.com/Leo4j/Invoke-ADEnum/refs/heads/main/Invoke-ADEnum.ps1' }
 
 # Stored into /usr/share/windows-resources/binaries/
 windows_zipped_binaries:
@@ -205,34 +208,39 @@ windows_zipped_binaries:
 # Cloned into /usr/share/
 linux_repositories:
   - { name: 'default-creds', url: 'https://github.com/ihebski/DefaultCreds-cheat-sheet' }
-  - { name: 'tomcat-webshell-application', url: 'https://github.com/p0dalirius/Tomcat-webshell-application' }
-  - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
-  - { name: 'spoofy', url: 'https://github.com/MattKeeley/Spoofy' }
-  - { name: 'ssh-usernames-enum', url: 'https://github.com/epi052/cve-2018-15473' }
-  - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
   - { name: 'eicar', url: 'https://github.com/fire1ce/eicar-standard-antivirus-test-files' } 
   - { name: 'fgds', url: 'https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan' }
+  - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
+  - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
+  - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }
+  - { name: 'spoofy', url: 'https://github.com/MattKeeley/Spoofy' }
+  - { name: 'ssh-usernames-enum', url: 'https://github.com/epi052/cve-2018-15473' }
+  - { name: 'tomcat-webshell-application', url: 'https://github.com/p0dalirius/Tomcat-webshell-application' }
 
 # Stored into /usr/local/bin/
 linux_binaries:
-  - { name: 'kerbrute', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64' }
-  - { name: 'namemash', url: 'https://gist.githubusercontent.com/superkojiman/11076951/raw/74f3de7740acb197ecfa8340d07d3926a95e5d46/namemash.py' }
-  - { name: 'impacket-httpattack', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/httpattack.py' }
-  - { name: 'impacket-privexchange', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/privexchange.py' }
-  - { name: 'impacket-renameMachine', url: 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py' }
+  - { name: 'adcskiller', url: 'https://raw.githubusercontent.com/grimlockx/ADCSKiller/refs/heads/main/adcskiller.py' }
+  - { name: 'dfscoerce', url: 'https://raw.githubusercontent.com/Wh04m1001/DFSCoerce/refs/heads/main/dfscoerce.py' }
+  - { name: 'dwrcs', url: 'https://raw.githubusercontent.com/tenable/poc/refs/heads/master/Solarwinds/Dameware/dwrcs_dwDrvInst_rce.py' }
+  - { name: 'imapcket-printerbug', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/printerbug.py' }
   - { name: 'impacket-addspn', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/addspn.py' }
   - { name: 'impacket-dnstool', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/dnstool.py' }
+  - { name: 'impacket-getnthash', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/getnthash.py'}
+  - { name: 'impacket-gets4uticket', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gets4uticket.py' }
+  - { name: 'impacket-gettgtpkinit', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gettgtpkinit.py' }
+  - { name: 'impacket-httpattack', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/httpattack.py' }
   - { name: 'impacket-krbrelayx', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/krbrelayx.py' }
-  - { name: 'imapcket-printerbug', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/printerbug.py' }
-  - { name: 'dwrcs', url: 'https://raw.githubusercontent.com/tenable/poc/refs/heads/master/Solarwinds/Dameware/dwrcs_dwDrvInst_rce.py' }
+  - { name: 'impacket-privexchange', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/privexchange.py' }
+  - { name: 'impacket-renameMachine', url: 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py' }
+  - { name: 'kerbrute', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64' }
   - { name: 'mangle', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_linux_amd64' }
-  - { name: 'petitpotam', url: 'https://raw.githubusercontent.com/ly4k/PetitPotam/refs/heads/main/petitpotam.py' }
-  - { name: 'dfscoerce', url: 'https://raw.githubusercontent.com/Wh04m1001/DFSCoerce/refs/heads/main/dfscoerce.py' }
-  - { name: 'printnightmare', url: 'https://raw.githubusercontent.com/ly4k/PrintNightmare/refs/heads/main/printnightmare.py' }
-  - { name: 'zerologon', url: 'https://github.com/dirkjanm/CVE-2020-1472/blob/master/cve-2020-1472-exploit.py' }
-  - { name: 'zerologon-restore', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/restorepassword.py' }
+  - { name: 'namemash', url: 'https://gist.githubusercontent.com/superkojiman/11076951/raw/74f3de7740acb197ecfa8340d07d3926a95e5d46/namemash.py' }
   - { name: 'nmap-automator', url: 'https://raw.githubusercontent.com/21y4d/nmapAutomator/refs/heads/master/nmapAutomator.sh' }
+  - { name: 'petitpotam', url: 'https://raw.githubusercontent.com/ly4k/PetitPotam/refs/heads/main/petitpotam.py' }
+  - { name: 'printnightmare', url: 'https://raw.githubusercontent.com/ly4k/PrintNightmare/refs/heads/main/printnightmare.py' }
   - { name: 'sharefiltrator', url: 'https://raw.githubusercontent.com/Friends-Security/sharefiltrator/refs/heads/main/sharefiltrator.py' }
+  - { name: 'zerologon-restore', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/restorepassword.py' }
+  - { name: 'zerologon', url: 'https://github.com/dirkjanm/CVE-2020-1472/blob/master/cve-2020-1472-exploit.py' }
 
 # Stored into /usr/local/bin/
 linux_zipped_binaries:

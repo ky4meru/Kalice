@@ -12,6 +12,7 @@ apt_packages:
   - build-essential
   - bloodhound
   - bloodhound.py
+  - bruteshark
   - brutespray
   - burpsuite
   - cargo
@@ -26,6 +27,7 @@ apt_packages:
   - dnsenum
   - dnsrecon
   - docker.io
+  - donut
   - enum4linux-ng
   - ent
   - evil-winrm
@@ -53,6 +55,7 @@ apt_packages:
   - kali-undercover
   - krb5-config
   - krb5-user
+  - libimage-exiftool-perl
   - libkrb5-dev
   - lightdm
   - ltrace
@@ -69,9 +72,11 @@ apt_packages:
   - nuclei
   - ollydbg
   - onesixtyone
+  - pdfgrep
   - peass
   - picom
   - pipx
+  - powershell-lts
   - powersploit
   - proxychains4
   - python2.7
@@ -155,6 +160,9 @@ pipx_packages:
   - 'https://github.com/skelsec/pypykatz'
   - 'https://github.com/login-securite/DonPAPI'
   - 'https://github.com/garrettfoster13/sccmhunter/'
+  - 'https://github.com/dirkjanm/ROADtools'
+  - 'https://github.com/sikumy/SpearSpray'
+  - 'https://github.com/MattKeeley/Spoofy'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -166,28 +174,33 @@ windows_binaries:
   - { name: 'ADPeas.ps1', url: 'https://github.com/61106960/adPEAS/raw/refs/heads/main/adPEAS.ps1' }
   - { name: 'ADPeasLight.ps1', url: 'https://github.com/61106960/adPEAS/raw/refs/heads/main/adPEAS-Light.ps1' }
   - { name: 'ADRecon.ps1', url: 'https://raw.githubusercontent.com/adrecon/ADRecon/refs/heads/master/ADRecon.ps1' }
-  - { name: 'BloodyAD.exe', url: 'https://github.com/CravateRouge/bloodyAD/releases/download/v2.0.7/bloodyAD.exe' }
+  - { name: 'BloodyAD.exe', url: 'https://github.com/CravateRouge/bloodyAD/releases/latest/download/bloodyAD.exe' }
   - { name: 'DomainPasswordSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/refs/heads/master/DomainPasswordSpray.ps1' }
+  - { name: 'EmailAddressMangler.ps1', url: 'https://raw.githubusercontent.com/dafthack/EmailAddressMangler/refs/heads/master/EmailAddressMangler.ps1' }
   - { name: 'GodPotato.exe', url: 'https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe' }
   - { name: 'Invoke-ADEnum.ps1', url: 'https://raw.githubusercontent.com/Leo4j/Invoke-ADEnum/refs/heads/main/Invoke-ADEnum.ps1' }
   - { name: 'JAWSEnum.ps1', url: 'https://raw.githubusercontent.com/411Hall/JAWS/refs/heads/master/jaws-enum.ps1' }
   - { name: 'JuicyPotato.exe', url: 'https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe' }
   - { name: 'Kerbrute.exe', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_windows_amd64.exe' }
   - { name: 'LAPSToolkit.ps1', url: 'https://raw.githubusercontent.com/leoloobeek/LAPSToolkit/refs/heads/master/LAPSToolkit.ps1' }
-  - { name: 'LaZagne.exe', url: 'https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.6/LaZagne.exe' }
+  - { name: 'LaZagne.exe', url: 'https://github.com/AlessandroZ/LaZagne/releases/latest/download/LaZagne.exe' }
   - { name: 'MailSniper.ps1', url: 'https://raw.githubusercontent.com/dafthack/MailSniper/refs/heads/master/MailSniper.ps1' }
   - { name: 'Mangle.exe', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_windows_amd64.exe' }
   - { name: 'MSOLSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/MSOLSpray/refs/heads/master/MSOLSpray.ps1' }
   - { name: 'PetitPotam.exe', url: 'https://github.com/topotam/PetitPotam/raw/refs/heads/main/PetitPotam.exe' }
   - { name: 'PointAndPrint.ps1', url: 'https://github.com/itm4n/PrivescCheck/releases/download/2025.09.01-1/PointAndPrint.ps1' }
   - { name: 'Powermad.ps1', url: 'https://raw.githubusercontent.com/Kevin-Robertson/Powermad/refs/heads/master/Powermad.ps1' }
+  - { name: 'PowerMeta.ps1', url: 'https://raw.githubusercontent.com/dafthack/PowerMeta/refs/heads/master/PowerMeta.ps1' }
+  - { name: 'PowerMeta-API.ps1', url: 'https://raw.githubusercontent.com/dafthack/PowerMeta/refs/heads/master/PowerMeta-API.ps1' }
   - { name: 'PrintSpoofer.exe', url: 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe' }
-  - { name: 'PrivescCheck.ps1', url: 'https://github.com/itm4n/PrivescCheck/releases/download/2025.09.01-1/PrivescCheck.ps1' }
+  - { name: 'PrivescCheck.ps1', url: 'https://github.com/itm4n/PrivescCheck/releases/latest/download/PrivescCheck.ps1' }
   - { name: 'PsMapExec.ps1', url: 'https://raw.githubusercontent.com/The-Viper-One/PsMapExec/main/PsMapExec.ps1' }
   - { name: 'SharpExclusionFinder.exe', url: 'https://github.com/Friends-Security/SharpExclusionFinder/releases/download/v1/SharpExclusionFinder.exe' }
-  - { name: 'Snaffler.exe', url: 'https://github.com/SnaffCon/Snaffler/releases/download/1.0.179/Snaffler.exe' }
+  - { name: 'SharPersist.exe', url: 'https://github.com/mandiant/SharPersist/releases/latest/download/SharPersist.exe' }
+  - { name: 'SharpSCCM.exe', url: 'https://github.com/Mayyhem/SharpSCCM/releases/latest/download/SharpSCCM.exe' }
+  - { name: 'Snaffler.exe', url: 'https://github.com/SnaffCon/Snaffler/releases/latest/download/Snaffler.exe' }
   - { name: 'SpoolFool.exe', url: 'https://github.com/ly4k/SpoolFool/raw/refs/heads/main/SpoolFool.exe' }
-  - { name: 'SQLRecon.exe', url: 'https://github.com/skahwah/SQLRecon/releases/download/v3.8/SQLRecon.exe' }
+  - { name: 'SQLRecon.exe', url: 'https://github.com/skahwah/SQLRecon/releases/latest/download/SQLRecon.exe' }
   - { name: 'WinPwn.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/WinPwn.ps1' }
   - { name: 'WinPwnOffline.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/Offline_WinPwn.ps1' }
 
@@ -197,13 +210,14 @@ windows_zipped_binaries:
   - 'https://github.com/SpecterOps/AzureHound/releases/download/v2.3.1/AzureHound_v2.3.1_windows_amd64.zip'
   - 'https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip'
   - 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
-  - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.3.0/nxc.exe.zip'
+  - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.4.0/nxc-windows-latest.zip'
   - 'https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.8/SharpHound-v2.5.8.zip'
   - 'https://github.com/VirusTotal/yara/releases/download/v4.5.2/yara-v4.5.2-2326-win64.zip'
   - 'https://github.com/bee-san/RustScan/releases/download/2.4.1/x86_64-windows-rustscan.exe.zip'
   - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_agent_0.7.5_windows_amd64.zip'
   - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_windows_amd64.zip'
   - 'https://github.com/diversenok/TokenUniverse/releases/download/v0.5/TokenUniverse.zip'
+  - 'https://github.com/Flangvik/TeamFiltration/releases/download/v3.5.5/TeamFiltration-v3.5.5-win-x86_64.zip'
 
 # Cloned into /usr/share/
 linux_repositories:
@@ -213,7 +227,6 @@ linux_repositories:
   - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
   - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
   - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }
-  - { name: 'spoofy', url: 'https://github.com/MattKeeley/Spoofy' }
   - { name: 'ssh-usernames-enum', url: 'https://github.com/epi052/cve-2018-15473' }
   - { name: 'tomcat-webshell-application', url: 'https://github.com/p0dalirius/Tomcat-webshell-application' }
 
@@ -236,6 +249,8 @@ linux_binaries:
   - { name: 'mangle', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_linux_amd64' }
   - { name: 'namemash', url: 'https://gist.githubusercontent.com/superkojiman/11076951/raw/74f3de7740acb197ecfa8340d07d3926a95e5d46/namemash.py' }
   - { name: 'nmap-automator', url: 'https://raw.githubusercontent.com/21y4d/nmapAutomator/refs/heads/master/nmapAutomator.sh' }
+  - { name: 'ntlmrawunhide', url: 'https://raw.githubusercontent.com/mlgualtieri/NTLMRawUnHide/refs/heads/master/NTLMRawUnHide.py' }
+  - { name: 'ntlmscan', url: 'https://raw.githubusercontent.com/nyxgeek/ntlmscan/refs/heads/master/ntlmscan.py' }
   - { name: 'petitpotam', url: 'https://raw.githubusercontent.com/ly4k/PetitPotam/refs/heads/main/petitpotam.py' }
   - { name: 'printnightmare', url: 'https://raw.githubusercontent.com/ly4k/PrintNightmare/refs/heads/main/printnightmare.py' }
   - { name: 'sharefiltrator', url: 'https://raw.githubusercontent.com/Friends-Security/sharefiltrator/refs/heads/main/sharefiltrator.py' }
@@ -249,6 +264,7 @@ linux_zipped_binaries:
   - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_linux_amd64.tar.gz'
   - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_agent_0.7.5_linux_amd64.tar.gz'
   - 'https://github.com/marco-lancini/goscan/releases/download/v2.4/goscan_2.4_linux_amd64.zip'
+  - 'https://github.com/Flangvik/TeamFiltration/releases/download/v3.5.5/TeamFiltration-v3.5.5-linux-x86_64.zip'
 
 # Files to remove before ending the playbook
 files_to_remove:

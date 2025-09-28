@@ -29,11 +29,11 @@
 - name: Download The Ultimate vimrc
   ansible.builtin.git:
     repo: 'https://github.com/amix/vimrc.git'
-    dest: $HOME/.vim_runtime
+    dest: '{{ ansible_env.HOME }}/.vim_runtime'
     depth: 1
 
 - name: Install The Ultimate vimrc
-  ansible.builtin.shell: sh $HOME/.vim_runtime/install_awesome_vimrc.sh
+  ansible.builtin.shell: sh {{ ansible_env.HOME }}/.vim_runtime/install_awesome_vimrc.sh
 
 - name: Set vim as default editor
   community.general.alternatives:
@@ -41,7 +41,9 @@
     path: /usr/bin/vim.basic
 
 - name: Set zsh as default shell
-  ansible.builtin.shell: chsh -s $(which zsh)
+  ansible.builtin.user:
+    name: "{{ ansible_user }}"
+    shell: /usr/bin/zsh
 
 - name: Install Oh My zsh
   ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -49,12 +51,12 @@
 - name: Download Oh My Pentest Report zsh theme
   ansible.builtin.git:
     repo: "https://github.com/sikumy/ohmy-pentest-report"
-    dest: "$ZSH_CUSTOM/themes/ohmy-pentest-report"
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report"
 
 - name: Install Oh My Pentest Report zsh theme
   ansible.builtin.shell: |
-    mv $ZSH_CUSTOM/themes/ohmy-pentest-report/ohmy-pentest-report.zsh-theme $HOME/.oh-my-zsh/themes/ohmy-pentest-report.zsh-theme
-    sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ohmy-pentest-report"/' $HOME/.zshrc
+    mv {{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report/ohmy-pentest-report.zsh-theme {{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report.zsh-theme
+    sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ohmy-pentest-report"/' {{ ansible_env.HOME }}/.zshrc
     zstyle ':omz:alpha:lib:git' async-prompt force
 
 - name: Download hashcat rules

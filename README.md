@@ -20,9 +20,13 @@ When executed, *Kalice* playbook will perform following operations.
 * Update, upgrade and clean `apt` packages.
 * Set timezone.
 * Enable `auditd`.
-* Configure [vim](https://www.vim.org/) as default editor.
-* Download and install a multitude of offensive tools - *see [./roles/kalice/vars/main.yml](./roles/kalice/vars/main.yml)*.
+* Configure [vim](https://www.vim.org/) as default editor and apply [The Ultimate virmc](https://github.com/amix/vimrc).
+* Install [Oh My Zsh](https://ohmyz.sh/) and apply [Oh My Pentest Report](https://github.com/sikumy/ohmy-pentest-report) theme.
+* Download and install a multitude of [offensive tools](./roles/kalice/vars/main.yml).
 * Clean useless files.
+
+> [!IMPORTANT]
+> It is recommended to reboot the host once the playbook is done. At least, open a new terminal.
 
 ## License
 

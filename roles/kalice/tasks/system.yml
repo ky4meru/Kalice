@@ -66,6 +66,7 @@
     mv {{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report/ohmy-pentest-report.zsh-theme {{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report.zsh-theme
     sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ohmy-pentest-report"/' {{ ansible_env.HOME }}/.zshrc
     sed -i '1s/^/zstyle ":omz:alpha:lib:git" async-prompt force/' {{ ansible_env.HOME }}/.zshrc
+    echo "enableall" >> {{ ansible_env.HOME }}/.zshrc
 
 - name: Download hashcat rules
   become: true

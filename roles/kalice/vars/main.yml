@@ -52,6 +52,7 @@ apt_packages:
   - i3
   - jadx
   - john
+  - joomscan
   - kali-undercover
   - krb5-config
   - krb5-user
@@ -125,10 +126,7 @@ apt_packages:
   - yara
   - zaproxy
   - zenmap
-
-# Installed with dpkg
-deb_packages:
-  - 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
+  - zsh
 
 # Installed with go into /usr/local/bin
 go_packages:
@@ -166,6 +164,9 @@ pipx_packages:
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
+  - { name: 'aadinternals', url: 'https://github.com/Gerenios/AADInternals' }
+  - { name: 'invoke-obfuscation', url: 'https://github.com/danielbohannon/Invoke-Obfuscation' }
+  - { name: 'nishang', url: 'https://github.com/samratashok/nishang' }
   - { name: 'sharp-collection', url: 'https://github.com/Flangvik/SharpCollection' }
 
 # Stored into /usr/share/windows-resources/binaries/
@@ -218,14 +219,18 @@ windows_zipped_binaries:
   - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_windows_amd64.zip'
   - 'https://github.com/diversenok/TokenUniverse/releases/download/v0.5/TokenUniverse.zip'
   - 'https://github.com/Flangvik/TeamFiltration/releases/download/v3.5.5/TeamFiltration-v3.5.5-win-x86_64.zip'
+  - 'https://github.com/Kevin-Robertson/Inveigh/releases/download/v2.0.11/Inveigh-net4.6.2-v2.0.11.zip'
 
 # Cloned into /usr/share/
 linux_repositories:
+  - { name: 'credmaster', url: 'https://github.com/knavesec/CredMaster' }
   - { name: 'default-creds', url: 'https://github.com/ihebski/DefaultCreds-cheat-sheet' }
   - { name: 'eicar', url: 'https://github.com/fire1ce/eicar-standard-antivirus-test-files' } 
   - { name: 'fgds', url: 'https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan' }
+  - { name: 'litterbox', url: 'https://github.com/BlackSnufkin/LitterBox' }
   - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
   - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
+  - { name: 'reconftw', 'url': 'https://github.com/six2dez/reconftw' }
   - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }
   - { name: 'ssh-usernames-enum', url: 'https://github.com/epi052/cve-2018-15473' }
   - { name: 'tomcat-webshell-application', url: 'https://github.com/p0dalirius/Tomcat-webshell-application' }

@@ -1,4 +1,5 @@
 - name: Update and upgrade apt packages
+  become: true
   ansible.builtin.apt:
     upgrade: true
     update_cache: true
@@ -8,15 +9,18 @@
     purge: true
 
 - name: Install useful apt packages
+  become: true
   ansible.builtin.apt:
     pkg: "{{ item }}"
   loop: "{{ apt_packages }}"
 
 - name: Set timezone to Europe/Paris
+  become: true
   community.general.timezone:
     name: Europe/Paris
 
 - name: Enable auditd
+  become: true
   ansible.builtin.systemd_service:
     name: auditd
     enabled: true
@@ -25,18 +29,36 @@
 - name: Download The Ultimate vimrc
   ansible.builtin.git:
     repo: 'https://github.com/amix/vimrc.git'
-    dest: /opt/vim_runtime
+    dest: $HOME/.vim_runtime
     depth: 1
 
 - name: Install The Ultimate vimrc
-  ansible.builtin.shell: sh /opt/vim_runtime/install_awesome_parameterized.sh /opt/vim_runtime --all
+  ansible.builtin.shell: sh $HOME/.vim_runtime/install_awesome_vimrc.sh
 
 - name: Set vim as default editor
   community.general.alternatives:
     name: editor
     path: /usr/bin/vim.basic
 
+- name: Set zsh as default shell
+  ansible.builtin.shell: chsh -s $(which zsh)
+
+- name: Install Oh My zsh
+  ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+- name: Download Oh My Pentest Report zsh theme
+  ansible.builtin.git:
+    repo: "https://github.com/sikumy/ohmy-pentest-report"
+    dest: "$ZSH_CUSTOM/themes/ohmy-pentest-report"
+
+- name: Install Oh My Pentest Report zsh theme
+  ansible.builtin.shell: |
+    mv $ZSH_CUSTOM/themes/ohmy-pentest-report/ohmy-pentest-report.zsh-theme $HOME/.oh-my-zsh/themes/ohmy-pentest-report.zsh-theme
+    sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ohmy-pentest-report"/' $HOME/.zshrc
+    zstyle ':omz:alpha:lib:git' async-prompt force
+
 - name: Download hashcat rules
+  become: true
   ansible.builtin.get_url:
     url: "{{ item.url }}"
     dest: "/usr/share/hashcat/rules/{{ item.name }}"

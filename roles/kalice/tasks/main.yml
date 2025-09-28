@@ -1,5 +1,4 @@
 - name: System configuration
-  become: true
   ansible.builtin.import_tasks: system.yml
 
 - name: Git repositories

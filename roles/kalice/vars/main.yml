@@ -161,6 +161,7 @@ pipx_packages:
   - 'https://github.com/dirkjanm/ROADtools'
   - 'https://github.com/sikumy/SpearSpray'
   - 'https://github.com/MattKeeley/Spoofy'
+  - 'https://github.com/synacktiv/gpoParser'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -238,26 +239,27 @@ linux_repositories:
 # Stored into /usr/local/bin/
 linux_binaries:
   - { name: 'adcskiller', url: 'https://raw.githubusercontent.com/grimlockx/ADCSKiller/refs/heads/main/adcskiller.py' }
+  - { name: 'addspn', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/addspn.py' }
   - { name: 'dfscoerce', url: 'https://raw.githubusercontent.com/Wh04m1001/DFSCoerce/refs/heads/main/dfscoerce.py' }
+  - { name: 'dnstool', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/dnstool.py' }
   - { name: 'dwrcs', url: 'https://raw.githubusercontent.com/tenable/poc/refs/heads/master/Solarwinds/Dameware/dwrcs_dwDrvInst_rce.py' }
-  - { name: 'imapcket-printerbug', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/printerbug.py' }
-  - { name: 'impacket-addspn', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/addspn.py' }
-  - { name: 'impacket-dnstool', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/dnstool.py' }
-  - { name: 'impacket-getnthash', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/getnthash.py'}
-  - { name: 'impacket-gets4uticket', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gets4uticket.py' }
-  - { name: 'impacket-gettgtpkinit', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gettgtpkinit.py' }
-  - { name: 'impacket-httpattack', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/httpattack.py' }
-  - { name: 'impacket-krbrelayx', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/krbrelayx.py' }
-  - { name: 'impacket-privexchange', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/privexchange.py' }
-  - { name: 'impacket-renameMachine', url: 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py' }
+  - { name: 'getnthash', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/getnthash.py'}
+  - { name: 'gets4uticket', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gets4uticket.py' }
+  - { name: 'gettgtpkinit', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gettgtpkinit.py' }
+  - { name: 'httpattack', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/httpattack.py' }
   - { name: 'kerbrute', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64' }
+  - { name: 'krbrelayx', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/krbrelayx.py' }
   - { name: 'mangle', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_linux_amd64' }
   - { name: 'namemash', url: 'https://gist.githubusercontent.com/superkojiman/11076951/raw/74f3de7740acb197ecfa8340d07d3926a95e5d46/namemash.py' }
-  - { name: 'nmap-automator', url: 'https://raw.githubusercontent.com/21y4d/nmapAutomator/refs/heads/master/nmapAutomator.sh' }
+  - { name: 'nmapAutomator', url: 'https://raw.githubusercontent.com/21y4d/nmapAutomator/refs/heads/master/nmapAutomator.sh' }
   - { name: 'ntlmrawunhide', url: 'https://raw.githubusercontent.com/mlgualtieri/NTLMRawUnHide/refs/heads/master/NTLMRawUnHide.py' }
   - { name: 'ntlmscan', url: 'https://raw.githubusercontent.com/nyxgeek/ntlmscan/refs/heads/master/ntlmscan.py' }
   - { name: 'petitpotam', url: 'https://raw.githubusercontent.com/ly4k/PetitPotam/refs/heads/main/petitpotam.py' }
+  - { name: 'printerbug', url: 'https://raw.githubusercontent.com/dirkjanm/krbrelayx/refs/heads/master/printerbug.py' }
+  - { name: 'printerbugnew', url: 'https://raw.githubusercontent.com/decoder-it/printerbugnew/refs/heads/main/printerbugnew.py' }
   - { name: 'printnightmare', url: 'https://raw.githubusercontent.com/ly4k/PrintNightmare/refs/heads/main/printnightmare.py' }
+  - { name: 'privexchange', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/privexchange.py' }
+  - { name: 'renameMachine', url: 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py' }
   - { name: 'sharefiltrator', url: 'https://raw.githubusercontent.com/Friends-Security/sharefiltrator/refs/heads/main/sharefiltrator.py' }
   - { name: 'zerologon-restore', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/restorepassword.py' }
   - { name: 'zerologon', url: 'https://github.com/dirkjanm/CVE-2020-1472/blob/master/cve-2020-1472-exploit.py' }

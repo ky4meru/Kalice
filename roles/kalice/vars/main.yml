@@ -1,37 +1,41 @@
 # Installed with apt
 apt_packages:
+  - 7zip
   - adb
   - antiword
-  - arping
   - arp-scan
+  - arping
   - asciinema
   - auditd
   - awscli
   - azure-cli
   - bettercap
-  - build-essential
   - bloodhound
   - bloodhound.py
   - bruteshark
   - brutespray
+  - build-essential
   - burpsuite
   - cargo
   - certipy-ad
   - chisel
   - chkrootkit
   - chromium
+  - cloudbrute
   - crackmapexec
   - cryptsetup
   - csvkit
+  - cupp
   - dirsearch
   - dnsenum
   - dnsrecon
   - docker.io
   - donut
-  - enum4linux-ng
   - ent
+  - enum4linux-ng
   - evil-winrm
   - feh
+  - feroxbuster
   - ffuf
   - firefox-esr
   - flameshot
@@ -48,8 +52,8 @@ apt_packages:
   - hsetroot
   - htop
   - hydra
-  - impacket-scripts
   - i3
+  - impacket-scripts
   - jadx
   - john
   - joomscan
@@ -74,6 +78,7 @@ apt_packages:
   - ollydbg
   - onesixtyone
   - pdfgrep
+  - pdftk
   - peass
   - picom
   - pipx
@@ -162,6 +167,7 @@ pipx_packages:
   - 'https://github.com/sikumy/SpearSpray'
   - 'https://github.com/MattKeeley/Spoofy'
   - 'https://github.com/synacktiv/gpoParser'
+  - 'https://github.com/p0dalirius/smbclient-ng'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:

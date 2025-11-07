@@ -110,6 +110,7 @@ apt_packages:
   - subfinder
   - sublist3r
   - telnet
+  - terraform
   - tesseract-ocr
   - testssl.sh
   - theharvester
@@ -197,6 +198,7 @@ windows_binaries:
   - { name: 'MSOLSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/MSOLSpray/refs/heads/master/MSOLSpray.ps1' }
   - { name: 'PetitPotam.exe', url: 'https://github.com/topotam/PetitPotam/raw/refs/heads/main/PetitPotam.exe' }
   - { name: 'PointAndPrint.ps1', url: 'https://github.com/itm4n/PrivescCheck/releases/download/2025.09.01-1/PointAndPrint.ps1' }
+  - { name: 'PowerLurk.ps1', url: 'https://raw.githubusercontent.com/Sw4mpf0x/PowerLurk/refs/heads/master/PowerLurk.ps1' }
   - { name: 'Powermad.ps1', url: 'https://raw.githubusercontent.com/Kevin-Robertson/Powermad/refs/heads/master/Powermad.ps1' }
   - { name: 'PowerMeta.ps1', url: 'https://raw.githubusercontent.com/dafthack/PowerMeta/refs/heads/master/PowerMeta.ps1' }
   - { name: 'PowerMeta-API.ps1', url: 'https://raw.githubusercontent.com/dafthack/PowerMeta/refs/heads/master/PowerMeta-API.ps1' }

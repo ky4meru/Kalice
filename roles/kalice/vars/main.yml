@@ -22,6 +22,7 @@ apt_packages:
   - chkrootkit
   - chromium
   - cloudbrute
+  - cmake
   - crackmapexec
   - cryptsetup
   - csvkit
@@ -30,6 +31,7 @@ apt_packages:
   - dnsenum
   - dnsrecon
   - docker.io
+  - docker-compose
   - donut
   - ent
   - enum4linux-ng
@@ -169,6 +171,8 @@ pipx_packages:
   - 'https://github.com/MattKeeley/Spoofy'
   - 'https://github.com/synacktiv/gpoParser'
   - 'https://github.com/p0dalirius/smbclient-ng'
+  - 'https://github.com/coffeegist/bofhound'
+  - 'https://github.com/1r0BIT/TaskHound'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -241,6 +245,7 @@ linux_repositories:
   - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
   - { name: 'reconftw', 'url': 'https://github.com/six2dez/reconftw' }
   - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }
+  - { name: 'sharp-shooter', url: 'https://github.com/mdsecactivebreach/SharpShooter' }
   - { name: 'ssh-usernames-enum', url: 'https://github.com/epi052/cve-2018-15473' }
   - { name: 'tomcat-webshell-application', url: 'https://github.com/p0dalirius/Tomcat-webshell-application' }
 

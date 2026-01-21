@@ -18,6 +18,7 @@ apt_packages:
   - burpsuite
   - cargo
   - certipy-ad
+  - cewl
   - chisel
   - chkrootkit
   - chromium
@@ -79,6 +80,7 @@ apt_packages:
   - nuclei
   - ollydbg
   - onesixtyone
+  - opendkim
   - pdfgrep
   - pdftk
   - peass
@@ -139,6 +141,7 @@ apt_packages:
 # Installed with go into /usr/local/bin
 go_packages:
   - 'github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest'
+  - 'github.com/WhiteOakSecurity/GoAWSConsoleSpray@latest'
 
 # Installed with cargo into /usr/local/bin
 rust_packages:
@@ -173,6 +176,11 @@ pipx_packages:
   - 'https://github.com/p0dalirius/smbclient-ng'
   - 'https://github.com/coffeegist/bofhound'
   - 'https://github.com/1r0BIT/TaskHound'
+  - 'https://github.com/carlospolop/cloudpeass.git'
+  - 'https://github.com/carnal0wnage/weirdAAL.git'
+  - 'https://github.com/RhinoSecurityLabs/pacu.git'
+  - 'https://github.com/oldrho/ip2provider.git'
+  - 'https://github.com/nccgroup/ScoutSuite.git'
 
 # Cloned into /usr/share/windows-resources/
 windows_repositories:
@@ -242,6 +250,7 @@ linux_repositories:
   - { name: 'fgds', url: 'https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan' }
   - { name: 'litterbox', url: 'https://github.com/BlackSnufkin/LitterBox' }
   - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
+  - { name: 'passthecert', url: 'https://github.com/AlmondOffSec/PassTheCert' }
   - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
   - { name: 'reconftw', 'url': 'https://github.com/six2dez/reconftw' }
   - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }

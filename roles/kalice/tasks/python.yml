@@ -1,6 +1,31 @@
+---
+- name: Check the pipx environment
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.command:
+    cmd: pipx list --include-injected --json
+  register: kalice_pipx_state
+  changed_when: false
+  failed_when: false
+
+- name: Repair pipx virtual environments with a missing interpreter
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.command:
+    cmd: pipx reinstall-all
+  register: kalice_pipx_repair
+  when: kalice_pipx_state.rc != 0
+  changed_when: kalice_pipx_repair.rc == 0
+  ignore_errors: true
+
 - name: Install pipx packages
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
   community.general.pipx:
-    name: "{{ item | basename | lower }}"
-    source: "git+{{ item }}"
+    name: "{{ item.name }}"
+    source: "git+{{ item.url }}"
     install_deps: true
-  loop: "{{ pipx_packages }}"
+  loop: "{{ kalice_pipx_packages }}"
+  loop_control:
+    label: "{{ item.name }}"
+  ignore_errors: true

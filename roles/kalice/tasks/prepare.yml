@@ -1,0 +1,20 @@
+---
+- name: Look up the configured user in the passwd database
+  ansible.builtin.getent:
+    database: passwd
+    key: "{{ kalice_user }}"
+  when: not kalice_home
+
+- name: Resolve the home directory of the configured user
+  ansible.builtin.set_fact:
+    kalice_home: "{{ ansible_facts.getent_passwd[kalice_user][4] }}"
+  when: not kalice_home
+
+- name: Assert that the configured user home directory is known
+  ansible.builtin.assert:
+    that:
+      - kalice_home | length > 0
+      - kalice_home is match('^/')
+    fail_msg: >-
+      Failed to resolve home path for « {{ kalice_user }} ».
+      Please define kalice_home explicitly in the inventory.

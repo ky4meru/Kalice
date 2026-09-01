@@ -1,77 +1,69 @@
+---
+- name: Check for the apt sources list
+  ansible.builtin.stat:
+    path: /etc/apt/sources.list
+  register: kalice_apt_sources
+  tags: apt
+
+- name: Point apt at the configured Kali mirror
+  ansible.builtin.replace:
+    path: /etc/apt/sources.list
+    regexp: 'https?://[^/\s]+/kali\b'
+    replace: "{{ kalice_apt_mirror }}"
+    backup: true
+  register: kalice_apt_mirror_set
+  when: kalice_apt_sources.stat.exists
+  tags: apt
+
 - name: Update and upgrade apt packages
-  become: true
   ansible.builtin.apt:
     upgrade: true
     update_cache: true
-    cache_valid_time: 3600
+    cache_valid_time: "{{ 0 if kalice_apt_mirror_set.changed else 3600 }}"
     autoremove: true
     autoclean: true
     purge: true
+  tags: apt
 
 - name: Install useful apt packages
-  become: true
   ansible.builtin.apt:
     pkg: "{{ item }}"
-  loop: "{{ apt_packages }}"
+  loop: "{{ kalice_apt_packages }}"
+  ignore_errors: true
+  tags: apt
 
-- name: Set timezone to Europe/Paris
-  become: true
+- name: Allow passwordless sudo for the configured user
+  ansible.builtin.copy:
+    dest: /etc/sudoers.d/kalice
+    content: |
+      {{ kalice_user }} ALL=(ALL) NOPASSWD:ALL
+    owner: root
+    group: root
+    mode: '0440'
+    validate: visudo -cf %s
+  when: kalice_sudo_nopasswd
+  tags: sudo
+
+- name: Set timezone
   community.general.timezone:
-    name: Europe/Paris
+    name: "{{ kalice_timezone }}"
 
 - name: Enable auditd
-  become: true
   ansible.builtin.systemd_service:
     name: auditd
     enabled: true
-    masked: no
-
-- name: Download The Ultimate vimrc
-  ansible.builtin.git:
-    repo: 'https://github.com/amix/vimrc.git'
-    dest: '{{ ansible_env.HOME }}/.vim_runtime'
-    depth: 1
-
-- name: Download The Ultimate vimrc
-  ansible.builtin.git:
-    repo: 'https://github.com/amix/vimrc.git'
-    dest: '{{ ansible_env.HOME }}/.vim_runtime'
-    depth: 1
-
-- name: Install The Ultimate vimrc
-  ansible.builtin.shell: sh {{ ansible_env.HOME }}/.vim_runtime/install_awesome_vimrc.sh
+    masked: false
+  when: "'auditd' in kalice_apt_packages"
 
 - name: Set vim as default editor
   community.general.alternatives:
     name: editor
-    path: /usr/bin/vim.basic
-
-- name: Set zsh as default shell
-  ansible.builtin.user:
-    name: "{{ ansible_env.USER }}"
-    shell: /usr/bin/zsh
-
-- name: Install Oh My zsh
-  ansible.builtin.shell: |
-    rm -rf {{ ansible_env.HOME }}/.oh-my-zsh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-- name: Download Oh My Pentest Report zsh theme
-  ansible.builtin.git:
-    repo: "https://github.com/sikumy/ohmy-pentest-report"
-    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report"
-
-- name: Install Oh My Pentest Report zsh theme
-  ansible.builtin.shell: |
-    mv {{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report/ohmy-pentest-report.zsh-theme {{ ansible_env.HOME }}/.oh-my-zsh/themes/ohmy-pentest-report.zsh-theme
-    sed -i 's/ZSH_THEME=".*"/ZSH_THEME="ohmy-pentest-report"/' {{ ansible_env.HOME }}/.zshrc
-    sed -i '1s/^/zstyle ":omz:alpha:lib:git" async-prompt force/' {{ ansible_env.HOME }}/.zshrc
-    echo "enableall" >> {{ ansible_env.HOME }}/.zshrc
+    path: "{{ kalice_editor }}"
 
 - name: Download hashcat rules
-  become: true
   ansible.builtin.get_url:
     url: "{{ item.url }}"
-    dest: "/usr/share/hashcat/rules/{{ item.name }}"
+    dest: "{{ kalice_hashcat_rules_dir }}/{{ item.name }}"
     mode: '0644'
-  loop: "{{ hashcat_rules }}"
+  loop: "{{ kalice_hashcat_rules }}"
+  ignore_errors: true

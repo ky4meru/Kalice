@@ -3,31 +3,49 @@
 <p align="center">Ansible playbook to automate offensive Kali Linux configuration</p>
 <hr>
 
-## TL;DR
+# Usage
 
-Install [Ansible](https://docs.ansible.com/) then run the playbook.
+> [!IMPORTANT]
+> It is strongly recommended to reboot the host after playbook execution.
+
+## Prerequisites
+
+Install [Ansible](https://docs.ansible.com/) and the required collections.
 
 ```bash
 sudo apt update -y
 sudo apt install -y ansible
-ansible-playbook main.yml --ask-become-pass
+ansible-galaxy collection install -r requirements.yml
 ```
 
-## RTFM
+## Run locally
 
-When executed, *Kalice* playbook will perform following operations.
+As simple as that.
 
-* Update, upgrade and clean `apt` packages.
-* Set timezone.
-* Enable `auditd`.
-* Configure [vim](https://www.vim.org/) as default editor and apply [The Ultimate virmc](https://github.com/amix/vimrc).
-* Install [Oh My Zsh](https://ohmyz.sh/) and apply [Oh My Pentest Report](https://github.com/sikumy/ohmy-pentest-report) theme.
-* Download and install a multitude of [offensive tools](./roles/kalice/vars/main.yml).
-* Clean useless files.
+```bash
+ANSIBLE_CONFIG=ansible.cfg ansible-playbook main.yml --ask-become-pass
+```
 
-> [!IMPORTANT]
-> It is recommended to reboot the host once the playbook is done. At least, open a new terminal.
+## Run remotely
 
-## License
+Add your remote hosts to [inventory/hosts.yml](./inventory/hosts.yml).
+
+```yaml
+kalice:
+  hosts:
+    localhost:
+      ansible_connection: local
+    kali-linux:
+      ansible_host: 10.10.0.42
+      ansible_user: kali
+```
+
+Then restrict the run to that hosts.
+
+```bash
+ANSIBLE_CONFIG=ansible.cfg ansible-playbook main.yml --limit kali-linux --ask-become-pass
+```
+
+# License
 
 See [LICENSE](./LICENSE.txt) file.

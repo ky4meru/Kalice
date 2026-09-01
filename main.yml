@@ -1,5 +1,6 @@
-- name: Kalice - Offensive Kali Linux Configuration
-  hosts: localhost
+---
+- name: Kalice - Offensive Kali Linux Playbook
+  hosts: kalice
+  gather_facts: true
   roles:
     - kalice
-  ignore_errors: true

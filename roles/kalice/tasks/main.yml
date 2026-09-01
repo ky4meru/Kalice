@@ -1,17 +1,38 @@
+---
+- name: Prepare
+  ansible.builtin.import_tasks: prepare.yml
+  tags: always
+
 - name: System configuration
+  become: true
   ansible.builtin.import_tasks: system.yml
+  tags: system
+
+- name: Docker post-installation
+  become: true
+  ansible.builtin.import_tasks: docker.yml
+  when: "'docker.io' in kalice_apt_packages"
+  tags: docker
+
+- name: User shell environment
+  ansible.builtin.import_tasks: shell.yml
+  tags: shell
 
 - name: Git repositories
   become: true
   ansible.builtin.import_tasks: git.yml
+  tags: [tools, git]
 
 - name: Python packages
   ansible.builtin.import_tasks: python.yml
+  tags: [tools, pipx]
 
 - name: Binaries
   become: true
   ansible.builtin.import_tasks: binaries.yml
+  tags: [tools, binaries]
 
 - name: Clean
   become: true
   ansible.builtin.import_tasks: clean.yml
+  tags: clean

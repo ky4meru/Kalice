@@ -1,0 +1,317 @@
+---
+kalice_user: "{{ ansible_facts['user_id'] }}"
+kalice_home: ""
+kalice_user_become: "{{ kalice_user != ansible_facts['user_id'] }}"
+kalice_sudo_nopasswd: false
+kalice_apt_mirror: 'http://kali.mirror.rafal.ca/kali'
+kalice_timezone: Europe/Paris
+kalice_shell: /usr/bin/zsh
+kalice_editor: /usr/bin/vim.basic
+
+kalice_apt_packages:
+  - 7zip
+  - adb
+  - antiword
+  - arp-scan
+  - arping
+  - asciinema
+  - auditd
+  - awscli
+  - azure-cli
+  - bettercap
+  - bloodhound
+  - bloodhound.py
+  - bruteshark
+  - brutespray
+  - build-essential
+  - burpsuite
+  - cargo
+  - certipy-ad
+  - cewl
+  - chisel
+  - chkrootkit
+  - chromium
+  - cloudbrute
+  - cmake
+  - crackmapexec
+  - cryptsetup
+  - csvkit
+  - cupp
+  - dirsearch
+  - dnsenum
+  - dnsrecon
+  - docker.io
+  - docker-compose
+  - donut
+  - ent
+  - enum4linux-ng
+  - evil-winrm
+  - feh
+  - feroxbuster
+  - ffuf
+  - firefox-esr
+  - flameshot
+  - freerdp3-x11
+  - gcc
+  - git
+  - gitleaks
+  - gobuster
+  - golang
+  - gowitness
+  - hashcat
+  - hcxdumptool
+  - hcxtools
+  - hsetroot
+  - htop
+  - hydra
+  - i3
+  - impacket-scripts
+  - jadx
+  - john
+  - joomscan
+  - kali-undercover
+  - krb5-config
+  - krb5-user
+  - libimage-exiftool-perl
+  - libkrb5-dev
+  - lightdm
+  - ltrace
+  - lynis
+  - maltego
+  - masscan
+  - medusa
+  - metasploit-framework
+  - mimikatz
+  - mitm6
+  - naabu
+  - net-tools
+  - nmap
+  - nuclei
+  - ollydbg
+  - onesixtyone
+  - opendkim
+  - pdfgrep
+  - pdftk
+  - peass
+  - picom
+  - pipx
+  - powershell
+  - powersploit
+  - proxychains4
+  - python2.7
+  - python3
+  - python3-dev
+  - python3-docker
+  - python3-ldap3
+  - python3-pefile
+  - python3-pip
+  - python3-venv
+  - redis-tools
+  - responder
+  - rkhunter
+  - seclists
+  - shellter
+  - sipcrack
+  - sippts
+  - sipvicious
+  - smbclient
+  - smbmap
+  - smtp-user-enum
+  - snmp
+  - snmp-mibs-downloader
+  - spiderfoot
+  - sqlmap
+  - ssh-audit
+  - sslscan
+  - subfinder
+  - sublist3r
+  - telnet
+  - terraform
+  - tesseract-ocr
+  - testssl.sh
+  - theharvester
+  - tree
+  - trufflehog
+  - ufw
+  - unix-privesc-check
+  - util-linux-extra
+  - veil
+  - vim
+  - wfuzz
+  - wget
+  - windows-binaries
+  - wireshark
+  - wordlists
+  - wpscan
+  - xinit
+  - xml-twig-tools
+  - xorg
+  - xorgxrdp
+  - xrdp
+  - xtightvncviewer
+  - yara
+  - zaproxy
+  - zenmap
+  - zsh
+
+kalice_go_packages:
+  - 'github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest'
+  - 'github.com/WhiteOakSecurity/GoAWSConsoleSpray@latest'
+
+kalice_rust_packages:
+  - 'rustscan'
+
+kalice_pipx_packages:
+  - { name: 'adexplorersnapshot', url: 'https://github.com/c3c/ADExplorerSnapshot.py' }
+  - { name: 'apachetomcatscanner', url: 'https://github.com/p0dalirius/ApacheTomcatScanner' }
+  - { name: 'bloodyad', url: 'https://github.com/CravateRouge/bloodyAD' }
+  - { name: 'bofhound', url: 'https://github.com/coffeegist/bofhound' }
+  - { name: 'coercer', url: 'https://github.com/p0dalirius/Coercer' }
+  - { name: 'donpapi', url: 'https://github.com/login-securite/DonPAPI' }
+  - { name: 'findmeaccess', url: 'https://github.com/absolomb/FindMeAccess' }
+  - { name: 'gpoparser', url: 'https://github.com/synacktiv/gpoParser' }
+  - { name: 'h8mail', url: 'https://github.com/khast3x/h8mail' }
+  - { name: 'holehe', url: 'https://github.com/megadose/holehe' }
+  - { name: 'itwasalladream', url: 'https://github.com/byt3bl33d3r/ItWasAllADream' }
+  - { name: 'keepwn', url: 'https://github.com/Orange-Cyberdefense/KeePwn' }
+  - { name: 'krbrelayx', url: 'https://github.com/dirkjanm/krbrelayx@f14568745f42ddeaca1fe4e6126407bdcee7e2ce' }
+  - { name: 'ldapsearchad', url: 'https://github.com/yaap7/ldapsearch-ad' }
+  - { name: 'maigret', url: 'https://github.com/soxoj/maigret' }
+  - { name: 'man-spider', url: 'https://github.com/blacklanternsecurity/MANSPIDER' }
+  - { name: 'netexec', url: 'https://github.com/Pennyw0rth/NetExec' }
+  - { name: 'ntlmrecon', url: 'https://github.com/pwnfoo/NTLMRecon' }
+  - { name: 'o365spray', url: 'https://github.com/0xZDH/o365spray' }
+  - { name: 'objection', url: 'https://github.com/sensepost/objection' }
+  - { name: 'pacu', url: 'https://github.com/RhinoSecurityLabs/pacu' }
+  - { name: 'pre2k', url: 'https://github.com/garrettfoster13/pre2k' }
+  - { name: 'pypykatz', url: 'https://github.com/skelsec/pypykatz' }
+  - { name: 'pywhat', url: 'https://github.com/bee-san/pyWhat' }
+  - { name: 'pywhisker', url: 'https://github.com/ShutdownRepo/pywhisker' }
+  - { name: 'roadtools', url: 'https://github.com/dirkjanm/ROADtools' }
+  - { name: 'sccmhunter', url: 'https://github.com/garrettfoster13/sccmhunter' }
+  - { name: 'scoutsuite', url: 'https://github.com/nccgroup/ScoutSuite' }
+  - { name: 'smartbrute', url: 'https://github.com/ShutdownRepo/smartbrute' }
+  - { name: 'smbclientng', url: 'https://github.com/p0dalirius/smbclient-ng' }
+  - { name: 'spearspray', url: 'https://github.com/sikumy/SpearSpray' }
+  - { name: 'spoofy', url: 'https://github.com/MattKeeley/Spoofy' }
+  - { name: 'taskhound', url: 'https://github.com/1r0BIT/TaskHound' }
+
+kalice_windows_repositories:
+  - { name: 'aadinternals', url: 'https://github.com/Gerenios/AADInternals' }
+  - { name: 'invoke-obfuscation', url: 'https://github.com/danielbohannon/Invoke-Obfuscation' }
+  - { name: 'nishang', url: 'https://github.com/samratashok/nishang' }
+  - { name: 'sharp-collection', url: 'https://github.com/Flangvik/SharpCollection' }
+
+kalice_windows_binaries:
+  - { name: 'AbuseAzureAPIPermissions.ps1', url: 'https://github.com/Hagrid29/AbuseAzureAPIPermissions/raw/refs/heads/main/AbuseAzureAPIPermissions.ps1' }
+  - { name: 'ADPeas.ps1', url: 'https://github.com/61106960/adPEAS/raw/refs/heads/main/adPEAS.ps1' }
+  - { name: 'ADPeasUltra.ps1', url: 'https://github.com/61106960/adPEAS/raw/refs/heads/main/adPEAS_ultra.ps1' }
+  - { name: 'ADRecon.ps1', url: 'https://raw.githubusercontent.com/adrecon/ADRecon/refs/heads/master/ADRecon.ps1' }
+  - { name: 'BloodyAD.exe', url: 'https://github.com/CravateRouge/bloodyAD/releases/latest/download/bloodyAD.exe' }
+  - { name: 'DomainPasswordSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/DomainPasswordSpray/refs/heads/master/DomainPasswordSpray.ps1' }
+  - { name: 'EmailAddressMangler.ps1', url: 'https://raw.githubusercontent.com/dafthack/EmailAddressMangler/refs/heads/master/EmailAddressMangler.ps1' }
+  - { name: 'GodPotato.exe', url: 'https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe' }
+  - { name: 'Invoke-ADEnum.ps1', url: 'https://raw.githubusercontent.com/Leo4j/Invoke-ADEnum/refs/heads/main/Invoke-ADEnum.ps1' }
+  - { name: 'JAWSEnum.ps1', url: 'https://raw.githubusercontent.com/411Hall/JAWS/refs/heads/master/jaws-enum.ps1' }
+  - { name: 'JuicyPotato.exe', url: 'https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe' }
+  - { name: 'Kerbrute.exe', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_windows_amd64.exe' }
+  - { name: 'LAPSToolkit.ps1', url: 'https://raw.githubusercontent.com/leoloobeek/LAPSToolkit/refs/heads/master/LAPSToolkit.ps1' }
+  - { name: 'LaZagne.exe', url: 'https://github.com/AlessandroZ/LaZagne/releases/latest/download/LaZagne.exe' }
+  - { name: 'MailSniper.ps1', url: 'https://raw.githubusercontent.com/dafthack/MailSniper/refs/heads/master/MailSniper.ps1' }
+  - { name: 'Mangle.exe', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_windows_amd64.exe' }
+  - { name: 'MSOLSpray.ps1', url: 'https://raw.githubusercontent.com/dafthack/MSOLSpray/refs/heads/master/MSOLSpray.ps1' }
+  - { name: 'PetitPotam.exe', url: 'https://github.com/topotam/PetitPotam/raw/refs/heads/main/PetitPotam.exe' }
+  - { name: 'PowerLurk.ps1', url: 'https://raw.githubusercontent.com/Sw4mpf0x/PowerLurk/refs/heads/master/PowerLurk.ps1' }
+  - { name: 'Powermad.ps1', url: 'https://raw.githubusercontent.com/Kevin-Robertson/Powermad/refs/heads/master/Powermad.ps1' }
+  - { name: 'PowerMeta.ps1', url: 'https://raw.githubusercontent.com/dafthack/PowerMeta/refs/heads/master/PowerMeta.ps1' }
+  - { name: 'PowerMeta-API.ps1', url: 'https://raw.githubusercontent.com/dafthack/PowerMeta/refs/heads/master/PowerMeta-API.ps1' }
+  - { name: 'PrintSpoofer.exe', url: 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe' }
+  - { name: 'PrivescCheck.ps1', url: 'https://github.com/itm4n/PrivescCheck/releases/latest/download/PrivescCheck.ps1' }
+  - { name: 'PsMapExec.ps1', url: 'https://raw.githubusercontent.com/The-Viper-One/PsMapExec/main/PsMapExec.ps1' }
+  - { name: 'SharpExclusionFinder.exe', url: 'https://github.com/Friends-Security/SharpExclusionFinder/releases/download/v1/SharpExclusionFinder.exe' }
+  - { name: 'SharPersist.exe', url: 'https://github.com/mandiant/SharPersist/releases/latest/download/SharPersist.exe' }
+  - { name: 'SharpSCCM.exe', url: 'https://github.com/Mayyhem/SharpSCCM/releases/latest/download/SharpSCCM.exe' }
+  - { name: 'Snaffler.exe', url: 'https://github.com/SnaffCon/Snaffler/releases/latest/download/Snaffler.exe' }
+  - { name: 'SpoolFool.exe', url: 'https://github.com/ly4k/SpoolFool/raw/refs/heads/main/SpoolFool.exe' }
+  - { name: 'SQLRecon.exe', url: 'https://github.com/skahwah/SQLRecon/releases/latest/download/SQLRecon.exe' }
+  - { name: 'WinPwn.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/WinPwn.ps1' }
+  - { name: 'WinPwnOffline.ps1', url: 'https://raw.githubusercontent.com/S3cur3Th1sSh1t/WinPwn/refs/heads/master/Offline_WinPwn.ps1' }
+
+kalice_windows_zipped_binaries:
+  - 'https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_windows_amd64_1.7.0.zip'
+  - 'https://github.com/SpecterOps/AzureHound/releases/download/v2.3.1/AzureHound_v2.3.1_windows_amd64.zip'
+  - 'https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip'
+  - 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
+  - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.4.0/nxc-windows-latest.zip'
+  - 'https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.8/SharpHound-v2.5.8.zip'
+  - 'https://github.com/VirusTotal/yara/releases/download/v4.5.2/yara-v4.5.2-2326-win64.zip'
+  - 'https://github.com/bee-san/RustScan/releases/download/2.4.1/x86_64-windows-rustscan.exe.zip'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_agent_0.7.5_windows_amd64.zip'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_windows_amd64.zip'
+  - 'https://github.com/diversenok/TokenUniverse/releases/download/v0.5/TokenUniverse.zip'
+  - 'https://github.com/Flangvik/TeamFiltration/releases/download/v3.5.5/TeamFiltration-v3.5.5-win-x86_64.zip'
+  - 'https://github.com/Kevin-Robertson/Inveigh/releases/download/v2.0.11/Inveigh-net4.6.2-v2.0.11.zip'
+
+kalice_linux_repositories:
+  - { name: 'cloudpeass', url: 'https://github.com/peass-ng/CloudPEASS' }
+  - { name: 'credmaster', url: 'https://github.com/knavesec/CredMaster' }
+  - { name: 'default-creds', url: 'https://github.com/ihebski/DefaultCreds-cheat-sheet' }
+  - { name: 'eicar', url: 'https://github.com/fire1ce/eicar-standard-antivirus-test-files' }
+  - { name: 'fgds', url: 'https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan' }
+  - { name: 'ip2provider', url: 'https://github.com/oldrho/ip2provider' }
+  - { name: 'litterbox', url: 'https://github.com/BlackSnufkin/LitterBox' }
+  - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
+  - { name: 'passthecert', url: 'https://github.com/AlmondOffSec/PassTheCert' }
+  - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
+  - { name: 'reconftw', 'url': 'https://github.com/six2dez/reconftw' }
+  - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }
+  - { name: 'sharp-shooter', url: 'https://github.com/mdsecactivebreach/SharpShooter' }
+  - { name: 'ssh-usernames-enum', url: 'https://github.com/epi052/cve-2018-15473' }
+  - { name: 'tomcat-webshell-application', url: 'https://github.com/p0dalirius/Tomcat-webshell-application' }
+  - { name: 'weirdaal', url: 'https://github.com/carnal0wnage/weirdAAL' }
+
+kalice_linux_binaries:
+  - { name: 'adcskiller', url: 'https://raw.githubusercontent.com/grimlockx/ADCSKiller/refs/heads/main/adcskiller.py' }
+  - { name: 'dfscoerce', url: 'https://raw.githubusercontent.com/Wh04m1001/DFSCoerce/refs/heads/main/dfscoerce.py' }
+  - { name: 'dwrcs', url: 'https://raw.githubusercontent.com/tenable/poc/refs/heads/master/Solarwinds/Dameware/dwrcs_dwDrvInst_rce.py' }
+  - { name: 'getnthash', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/getnthash.py'}
+  - { name: 'gets4uticket', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gets4uticket.py' }
+  - { name: 'gettgtpkinit', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gettgtpkinit.py' }
+  - { name: 'httpattack', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/httpattack.py' }
+  - { name: 'kerbrute', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64' }
+  - { name: 'mangle', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_linux_amd64' }
+  - { name: 'namemash', url: 'https://gist.githubusercontent.com/superkojiman/11076951/raw/74f3de7740acb197ecfa8340d07d3926a95e5d46/namemash.py' }
+  - { name: 'nmapAutomator', url: 'https://raw.githubusercontent.com/21y4d/nmapAutomator/refs/heads/master/nmapAutomator.sh' }
+  - { name: 'ntlmrawunhide', url: 'https://raw.githubusercontent.com/mlgualtieri/NTLMRawUnHide/refs/heads/master/NTLMRawUnHide.py' }
+  - { name: 'ntlmscan', url: 'https://raw.githubusercontent.com/nyxgeek/ntlmscan/refs/heads/master/ntlmscan.py' }
+  - { name: 'petitpotam', url: 'https://raw.githubusercontent.com/ly4k/PetitPotam/refs/heads/main/petitpotam.py' }
+  - { name: 'printerbugnew', url: 'https://raw.githubusercontent.com/decoder-it/printerbugnew/refs/heads/main/printerbugnew.py' }
+  - { name: 'printnightmare', url: 'https://raw.githubusercontent.com/ly4k/PrintNightmare/refs/heads/main/printnightmare.py' }
+  - { name: 'privexchange', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/privexchange.py' }
+  - { name: 'renameMachine', url: 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py' }
+  - { name: 'sharefiltrator', url: 'https://raw.githubusercontent.com/Friends-Security/sharefiltrator/refs/heads/main/sharefiltrator.py' }
+  - { name: 'zerologon-restore', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/restorepassword.py' }
+  - { name: 'zerologon', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/cve-2020-1472-exploit.py' }
+
+kalice_linux_zipped_binaries:
+  - 'https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip'
+  - 'https://github.com/SpecterOps/AzureHound/releases/download/v2.3.1/AzureHound_v2.3.1_linux_amd64.zip'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_linux_amd64.tar.gz'
+  - 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_agent_0.7.5_linux_amd64.tar.gz'
+  - 'https://github.com/marco-lancini/goscan/releases/download/v2.4/goscan_2.4_linux_amd64.zip'
+  - 'https://github.com/Flangvik/TeamFiltration/releases/download/v3.5.5/TeamFiltration-v3.5.5-linux-x86_64.zip'
+  - 'https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz'
+
+kalice_files_to_remove:
+  - /usr/share/windows-binaries/LICENSE
+  - /usr/share/windows-binaries/LICENSE.txt
+  - /usr/share/windows-binaries/psversion.txt
+  - /usr/share/windows-binaries/readme.txt
+  - /usr/share/windows-binaries/README.md
+  - /usr/local/bin/README.md
+  - /usr/local/bin/LICENSE.txt
+  - /usr/local/bin/LICENSE
+
+kalice_hashcat_rules:
+  - { name: 'oneruletorulethemstill.rule',
+      url: 'https://raw.githubusercontent.com/stealthsploit/OneRuleToRuleThemStill/refs/heads/main/OneRuleToRuleThemStill.rule' }

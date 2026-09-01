@@ -1,0 +1,7 @@
+---
+warn_list:
+  - latest[git]
+  - ignore-errors
+
+exclude_paths:
+  - .github/

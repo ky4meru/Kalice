@@ -1,0 +1,100 @@
+---
+- name: Set zsh as default shell for the configured user
+  become: true
+  ansible.builtin.user:
+    name: "{{ kalice_user }}"
+    shell: "{{ kalice_shell }}"
+
+- name: Download The Ultimate vimrc
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.git:
+    repo: "https://github.com/amix/vimrc.git"
+    dest: "{{ kalice_home }}/.vim_runtime"
+    depth: 1
+  ignore_errors: true
+
+- name: Install The Ultimate vimrc
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.command:
+    cmd: sh {{ kalice_home }}/.vim_runtime/install_awesome_vimrc.sh
+    creates: "{{ kalice_home }}/.vimrc"
+  ignore_errors: true
+
+- name: Install Oh My zsh
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.shell:
+    cmd: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    creates: "{{ kalice_home }}/.oh-my-zsh"
+  ignore_errors: true
+
+- name: Download Oh My Pentest Report zsh theme
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.git:
+    repo: "https://github.com/sikumy/ohmy-pentest-report"
+    dest: "{{ kalice_home }}/.oh-my-zsh/themes/ohmy-pentest-report"
+  ignore_errors: true
+
+- name: Install the Oh My Pentest Report theme file
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.copy:
+    src: "{{ kalice_home }}/.oh-my-zsh/themes/ohmy-pentest-report/ohmy-pentest-report.zsh-theme"
+    dest: "{{ kalice_home }}/.oh-my-zsh/themes/ohmy-pentest-report.zsh-theme"
+    remote_src: true
+    mode: '0644'
+  ignore_errors: true
+
+- name: Check whether the zsh configuration file exists
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.stat:
+    path: "{{ kalice_home }}/.zshrc"
+  register: kalice_zshrc
+
+- name: Select the Oh My Pentest Report theme in zshrc
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.lineinfile:
+    path: "{{ kalice_home }}/.zshrc"
+    regexp: '^ZSH_THEME='
+    line: 'ZSH_THEME="ohmy-pentest-report"'
+  when: kalice_zshrc.stat.exists
+
+- name: Force the async prompt for the git library
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.lineinfile:
+    path: "{{ kalice_home }}/.zshrc"
+    line: 'zstyle ":omz:alpha:lib:git" async-prompt force'
+    insertbefore: BOF
+  when: kalice_zshrc.stat.exists
+
+- name: Enable all Oh My Pentest Report segments
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.lineinfile:
+    path: "{{ kalice_home }}/.zshrc"
+    line: enableall
+    insertafter: EOF
+  when: kalice_zshrc.stat.exists
+
+- name: Download the zsh-autoswitch-virtualenv plugin
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.git:
+    repo: "https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git"
+    dest: "{{ kalice_home }}/.zsh-autoswitch-virtualenv"
+  ignore_errors: true
+
+- name: Source the zsh-autoswitch-virtualenv plugin from zshrc
+  become: "{{ kalice_user_become }}"
+  become_user: "{{ kalice_user }}"
+  ansible.builtin.lineinfile:
+    path: "{{ kalice_home }}/.zshrc"
+    line: "source {{ kalice_home }}/.zsh-autoswitch-virtualenv/autoswitch_virtualenv.plugin.zsh"
+    insertafter: EOF
+  when: kalice_zshrc.stat.exists

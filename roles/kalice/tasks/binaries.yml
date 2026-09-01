@@ -1,35 +1,88 @@
+---
+- name: Ensure the archive cache directory exists
+  ansible.builtin.file:
+    path: "{{ kalice_cache_dir }}"
+    state: directory
+    mode: '0755'
+  tags: [linux, windows]
+
 - name: Download Golang binaries
-  ansible.builtin.shell: GO111MODULE=on GOBIN=/usr/local/bin go install -v {{ item }}
-  loop: "{{ go_packages }}"
+  ansible.builtin.command:
+    cmd: go install -v {{ item }}
+    creates: "{{ kalice_bin_dir }}/{{ item | regex_replace('@.*$', '') | basename }}"
+  environment:
+    GO111MODULE: 'on'
+    GOBIN: "{{ kalice_bin_dir }}"
+  loop: "{{ kalice_go_packages }}"
+  ignore_errors: true
+  tags: linux
 
 - name: Download Rust binaries
-  ansible.builtin.shell: cargo install --root /usr/local {{ item }}
-  loop: "{{ rust_packages }}"
+  ansible.builtin.command:
+    cmd: cargo install --root {{ kalice_prefix }} {{ item }}
+    creates: "{{ kalice_bin_dir }}/{{ item }}"
+  loop: "{{ kalice_rust_packages }}"
+  ignore_errors: true
+  tags: linux
 
 - name: Download Linux binaries
   ansible.builtin.get_url:
     url: "{{ item.url }}"
-    dest: "/usr/local/bin/{{ item.name }}"
+    dest: "{{ kalice_bin_dir }}/{{ item.name }}"
     mode: '0755'
-  loop: "{{ linux_binaries }}"
+  loop: "{{ kalice_linux_binaries }}"
+  ignore_errors: true
+  tags: linux
 
-- name: Download and unarchive Linux zipped binaries
+- name: Download Linux zipped binaries
+  ansible.builtin.get_url:
+    url: "{{ item }}"
+    dest: "{{ kalice_cache_dir }}/{{ item | basename }}"
+    mode: '0644'
+  loop: "{{ kalice_linux_zipped_binaries }}"
+  register: kalice_linux_archives
+  ignore_errors: true
+  tags: linux
+
+- name: Unarchive Linux zipped binaries
   ansible.builtin.unarchive:
-    src: "{{ item }}"
-    dest: /usr/local/bin/
-    remote_src: yes
-  loop: "{{ linux_zipped_binaries }}"
+    src: "{{ item.dest }}"
+    dest: "{{ kalice_bin_dir }}/"
+    remote_src: true
+  loop: "{{ kalice_linux_archives.results
+            | selectattr('changed', 'defined') | selectattr('changed') | list }}"
+  loop_control:
+    label: "{{ item.dest | basename }}"
+  ignore_errors: true
+  tags: linux
 
 - name: Download Windows binaries
   ansible.builtin.get_url:
     url: "{{ item.url }}"
-    dest: "/usr/share/windows-resources/binaries/{{ item.name }}"
+    dest: "{{ kalice_windows_bin_dir }}/{{ item.name }}"
     mode: '0755'
-  loop: "{{ windows_binaries }}"
+  loop: "{{ kalice_windows_binaries }}"
+  ignore_errors: true
+  tags: windows
 
-- name: Download and unarchive Windows zipped binaries
+- name: Download Windows zipped binaries
+  ansible.builtin.get_url:
+    url: "{{ item }}"
+    dest: "{{ kalice_cache_dir }}/{{ item | basename }}"
+    mode: '0644'
+  loop: "{{ kalice_windows_zipped_binaries }}"
+  register: kalice_windows_archives
+  ignore_errors: true
+  tags: windows
+
+- name: Unarchive Windows zipped binaries
   ansible.builtin.unarchive:
-    src: "{{ item }}"
-    dest: /usr/share/windows-resources/binaries/
-    remote_src: yes
-  loop: "{{ windows_zipped_binaries }}"
+    src: "{{ item.dest }}"
+    dest: "{{ kalice_windows_bin_dir }}/"
+    remote_src: true
+  loop: "{{ kalice_windows_archives.results
+            | selectattr('changed', 'defined') | selectattr('changed') | list }}"
+  loop_control:
+    label: "{{ item.dest | basename }}"
+  ignore_errors: true
+  tags: windows

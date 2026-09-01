@@ -1,0 +1,8 @@
+__pycache__/
+.ansible/
+.vault_pass
+*.retry
+*.swo
+*.swp
+*~
+collections/

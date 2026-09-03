@@ -296,6 +296,7 @@ kalice_linux_binaries:
   - { name: 'printnightmare', url: 'https://raw.githubusercontent.com/ly4k/PrintNightmare/refs/heads/main/printnightmare.py' }
   - { name: 'privexchange', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/privexchange.py' }
   - { name: 'renameMachine', url: 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py' }
+  - { name: 'scopeit', url: 'https://raw.githubusercontent.com/ky4meru/ScopeIt/refs/heads/main/scopeit.py' }
   - { name: 'sharefiltrator', url: 'https://raw.githubusercontent.com/Friends-Security/sharefiltrator/refs/heads/main/sharefiltrator.py' }
   - { name: 'zerologon-restore', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/restorepassword.py' }
   - { name: 'zerologon', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/cve-2020-1472-exploit.py' }

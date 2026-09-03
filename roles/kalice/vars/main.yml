@@ -1,9 +1,7 @@
 ---
 kalice_prefix: /usr/local
 kalice_bin_dir: "{{ kalice_prefix }}/bin"
-
 kalice_share_dir: /usr/share
-
 kalice_cache_dir: /var/cache/kalice
 kalice_windows_dir: /usr/share/windows-resources
 kalice_windows_bin_dir: /usr/share/windows-resources/binaries

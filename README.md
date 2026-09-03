@@ -8,9 +8,18 @@
 > [!IMPORTANT]
 > It is strongly recommended to reboot the host after playbook execution.
 
+## TL;DR
+
+One-liner from a Kali Linux host.
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ky4meru/Kalice/main/install.sh)"
+```
+
 ## Prerequisites
 
-Install [Ansible](https://docs.ansible.com/) and the required collections.
+The steps below are what `install.sh` automates. Install
+[Ansible](https://docs.ansible.com/) and the required collections.
 
 ```bash
 sudo apt update -y
@@ -45,6 +54,15 @@ Then restrict the run to that hosts.
 ```bash
 ANSIBLE_CONFIG=ansible.cfg ansible-playbook main.yml --limit kali-linux --ask-become-pass
 ```
+
+# Tools
+
+The complete list is available in [roles/kalice/defaults/main.yml](./roles/kalice/defaults/main.yml).
+
+* Windows projects are stored in `/usr/share/windows-resources/`.
+* Windows binaries (`.exe`, `.ps1`, etc.) are stored in `/usr/share/windows-resources/binaries`.
+* Linux projects are stored in `/usr/share/`.
+* Others tools are installed (via `go`, `cargo`, `pipx`, etc.) and available via `$PATH`.
 
 # License
 

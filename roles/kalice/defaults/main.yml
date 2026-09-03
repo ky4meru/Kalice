@@ -159,10 +159,14 @@ kalice_go_packages:
   - 'github.com/WhiteOakSecurity/GoAWSConsoleSpray@latest'
 
 kalice_rust_packages:
+  - 'rsacracker'
   - 'rustscan'
 
 kalice_pipx_packages:
+  - { name: 'abuseACL', url: 'https://github.com/AetherBlack/abuseACL' }
+  - { name: 'aclpwn', url: 'https://github.com/aas-n/aclpwn.py' }
   - { name: 'adexplorersnapshot', url: 'https://github.com/c3c/ADExplorerSnapshot.py' }
+  - { name: 'adidnsdump', url: 'https://github.com/dirkjanm/adidnsdump' }
   - { name: 'apachetomcatscanner', url: 'https://github.com/p0dalirius/ApacheTomcatScanner' }
   - { name: 'bloodyad', url: 'https://github.com/CravateRouge/bloodyAD' }
   - { name: 'bofhound', url: 'https://github.com/coffeegist/bofhound' }
@@ -187,6 +191,7 @@ kalice_pipx_packages:
   - { name: 'pypykatz', url: 'https://github.com/skelsec/pypykatz' }
   - { name: 'pywhat', url: 'https://github.com/bee-san/pyWhat' }
   - { name: 'pywhisker', url: 'https://github.com/ShutdownRepo/pywhisker' }
+  - { name: 'ritm', url: 'https://github.com/Tw1sm/RITM' }
   - { name: 'roadtools', url: 'https://github.com/dirkjanm/ROADtools' }
   - { name: 'sccmhunter', url: 'https://github.com/garrettfoster13/sccmhunter' }
   - { name: 'scoutsuite', url: 'https://github.com/nccgroup/ScoutSuite' }
@@ -195,6 +200,7 @@ kalice_pipx_packages:
   - { name: 'spearspray', url: 'https://github.com/sikumy/SpearSpray' }
   - { name: 'spoofy', url: 'https://github.com/MattKeeley/Spoofy' }
   - { name: 'taskhound', url: 'https://github.com/1r0BIT/TaskHound' }
+  - { name: 'wskus', url: 'https://github.com/NeffIsBack/wsuks' }
 
 kalice_windows_repositories:
   - { name: 'aadinternals', url: 'https://github.com/Gerenios/AADInternals' }
@@ -242,7 +248,7 @@ kalice_windows_zipped_binaries:
   - 'https://github.com/SpecterOps/AzureHound/releases/download/v2.3.1/AzureHound_v2.3.1_windows_amd64.zip'
   - 'https://github.com/antonioCoco/RoguePotato/releases/download/1.0/RoguePotato.zip'
   - 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
-  - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.4.0/nxc-windows-latest.zip'
+  - 'https://github.com/Pennyw0rth/NetExec/releases/download/v1.5.0/nxc-windows-latest.zip'
   - 'https://github.com/BloodHoundAD/SharpHound/releases/download/v2.5.8/SharpHound-v2.5.8.zip'
   - 'https://github.com/VirusTotal/yara/releases/download/v4.5.2/yara-v4.5.2-2326-win64.zip'
   - 'https://github.com/bee-san/RustScan/releases/download/2.4.1/x86_64-windows-rustscan.exe.zip'
@@ -253,16 +259,20 @@ kalice_windows_zipped_binaries:
   - 'https://github.com/Kevin-Robertson/Inveigh/releases/download/v2.0.11/Inveigh-net4.6.2-v2.0.11.zip'
 
 kalice_linux_repositories:
+  - { name: 'azureredops', url: 'https://github.com/Mr-Un1k0d3r/AzureRedOps' }
   - { name: 'cloudpeass', url: 'https://github.com/peass-ng/CloudPEASS' }
   - { name: 'credmaster', url: 'https://github.com/knavesec/CredMaster' }
   - { name: 'default-creds', url: 'https://github.com/ihebski/DefaultCreds-cheat-sheet' }
   - { name: 'eicar', url: 'https://github.com/fire1ce/eicar-standard-antivirus-test-files' }
   - { name: 'fgds', url: 'https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan' }
+  - { name: 'getaccesstokenwithssocookie', url: 'https://github.com/antroguy/GetAccessTokenWithSSOCookie' }
   - { name: 'ip2provider', url: 'https://github.com/oldrho/ip2provider' }
   - { name: 'litterbox', url: 'https://github.com/BlackSnufkin/LitterBox' }
   - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
   - { name: 'passthecert', url: 'https://github.com/AlmondOffSec/PassTheCert' }
+  - { name: 'pkinittools', url: 'https://github.com/dirkjanm/PKINITtools' }
   - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
+  - { name: 'pyfinduncommonshares', url: 'https://github.com/p0dalirius/pyFindUncommonShares' }
   - { name: 'reconftw', 'url': 'https://github.com/six2dez/reconftw' }
   - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }
   - { name: 'sharp-shooter', url: 'https://github.com/mdsecactivebreach/SharpShooter' }
@@ -274,9 +284,6 @@ kalice_linux_binaries:
   - { name: 'adcskiller', url: 'https://raw.githubusercontent.com/grimlockx/ADCSKiller/refs/heads/main/adcskiller.py' }
   - { name: 'dfscoerce', url: 'https://raw.githubusercontent.com/Wh04m1001/DFSCoerce/refs/heads/main/dfscoerce.py' }
   - { name: 'dwrcs', url: 'https://raw.githubusercontent.com/tenable/poc/refs/heads/master/Solarwinds/Dameware/dwrcs_dwDrvInst_rce.py' }
-  - { name: 'getnthash', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/getnthash.py'}
-  - { name: 'gets4uticket', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gets4uticket.py' }
-  - { name: 'gettgtpkinit', url: 'https://raw.githubusercontent.com/dirkjanm/PKINITtools/refs/heads/master/gettgtpkinit.py' }
   - { name: 'httpattack', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/httpattack.py' }
   - { name: 'kerbrute', url: 'https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64' }
   - { name: 'mangle', url: 'https://github.com/optiv/Mangle/releases/download/v1.2/Mangle_1.2_linux_amd64' }

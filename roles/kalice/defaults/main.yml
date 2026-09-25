@@ -72,8 +72,10 @@ kalice_apt_packages:
   - kali-undercover
   - krb5-config
   - krb5-user
+  - ldeep
   - libimage-exiftool-perl
   - libkrb5-dev
+  - libpcap-dev
   - lightdm
   - ltrace
   - lynis
@@ -130,6 +132,7 @@ kalice_apt_packages:
   - tesseract-ocr
   - testssl.sh
   - theharvester
+  - tor
   - tree
   - trufflehog
   - ufw
@@ -188,9 +191,11 @@ kalice_pipx_packages:
   - { name: 'objection', url: 'https://github.com/sensepost/objection' }
   - { name: 'pacu', url: 'https://github.com/RhinoSecurityLabs/pacu' }
   - { name: 'pre2k', url: 'https://github.com/garrettfoster13/pre2k' }
+  - { name: 'pxethiefy', url: 'https://github.com/csandker/pxethiefy' }
   - { name: 'pypykatz', url: 'https://github.com/skelsec/pypykatz' }
   - { name: 'pywhat', url: 'https://github.com/bee-san/pyWhat' }
   - { name: 'pywhisker', url: 'https://github.com/ShutdownRepo/pywhisker' }
+  - { name: 'relayking', url: 'https://github.com/depthsecurity/RelayKing-Depth' }
   - { name: 'ritm', url: 'https://github.com/Tw1sm/RITM' }
   - { name: 'roadtools', url: 'https://github.com/dirkjanm/ROADtools' }
   - { name: 'sccmhunter', url: 'https://github.com/garrettfoster13/sccmhunter' }
@@ -204,6 +209,7 @@ kalice_pipx_packages:
 
 kalice_windows_repositories:
   - { name: 'aadinternals', url: 'https://github.com/Gerenios/AADInternals' }
+  - { name: 'aadinternals-endpoints', url: 'https://github.com/Gerenios/AADInternals-Endpoints' }
   - { name: 'invoke-obfuscation', url: 'https://github.com/danielbohannon/Invoke-Obfuscation' }
   - { name: 'nishang', url: 'https://github.com/samratashok/nishang' }
   - { name: 'sharp-collection', url: 'https://github.com/Flangvik/SharpCollection' }
@@ -270,12 +276,16 @@ kalice_linux_repositories:
   - { name: 'litterbox', url: 'https://github.com/BlackSnufkin/LitterBox' }
   - { name: 'nopac', url: 'https://github.com/Ridter/noPac' }
   - { name: 'passthecert', url: 'https://github.com/AlmondOffSec/PassTheCert' }
+  - { name: 'pcredz', url: 'https://github.com/lgandx/PCredz' }
   - { name: 'pkinittools', url: 'https://github.com/dirkjanm/PKINITtools' }
   - { name: 'proxynotshell', url: 'https://github.com/testanull/ProxyNotShell-PoC' }
   - { name: 'pyfinduncommonshares', url: 'https://github.com/p0dalirius/pyFindUncommonShares' }
+  - { name: 'react2shell-scanner', url: 'https://github.com/assetnote/react2shell-scanner' }
   - { name: 'reconftw', 'url': 'https://github.com/six2dez/reconftw' }
   - { name: 'sccm-secrets', url: 'https://github.com/synacktiv/SCCMSecrets' }
+  - { name: 'sharefiltrator', url: 'https://github.com/Friends-Security/sharefiltrator' }
   - { name: 'sharp-shooter', url: 'https://github.com/mdsecactivebreach/SharpShooter' }
+  - { name: 'snafflepy', url: 'https://github.com/cisagov/snafflepy' }
   - { name: 'ssh-usernames-enum', url: 'https://github.com/epi052/cve-2018-15473' }
   - { name: 'tomcat-webshell-application', url: 'https://github.com/p0dalirius/Tomcat-webshell-application' }
   - { name: 'weirdaal', url: 'https://github.com/carnal0wnage/weirdAAL' }
@@ -297,7 +307,6 @@ kalice_linux_binaries:
   - { name: 'privexchange', url: 'https://raw.githubusercontent.com/dirkjanm/PrivExchange/refs/heads/master/privexchange.py' }
   - { name: 'renameMachine', url: 'https://raw.githubusercontent.com/fortra/impacket/0c74df065eeffde8c24edb56e880ab49c82530b7/examples/renameMachine.py' }
   - { name: 'scopeit', url: 'https://raw.githubusercontent.com/ky4meru/ScopeIt/refs/heads/main/scopeit.py' }
-  - { name: 'sharefiltrator', url: 'https://raw.githubusercontent.com/Friends-Security/sharefiltrator/refs/heads/main/sharefiltrator.py' }
   - { name: 'zerologon-restore', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/restorepassword.py' }
   - { name: 'zerologon', url: 'https://raw.githubusercontent.com/dirkjanm/CVE-2020-1472/refs/heads/master/cve-2020-1472-exploit.py' }
 

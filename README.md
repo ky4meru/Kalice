@@ -66,4 +66,4 @@ The complete list is available in [roles/kalice/defaults/main.yml](./roles/kalic
 
 # License
 
-See [LICENSE](./LICENSE.txt) file.
+See [LICENSE.txt](./LICENSE.txt) file.

@@ -32,6 +32,14 @@
   ignore_errors: true
   tags: apt
 
+- name: Purge apt packages conflicting with other installation methods
+  ansible.builtin.apt:
+    pkg: "{{ kalice_apt_purge_packages }}"
+    state: absent
+    purge: true
+    autoremove: true
+  tags: apt
+
 - name: Allow passwordless sudo for the configured user
   ansible.builtin.copy:
     dest: /etc/sudoers.d/kalice

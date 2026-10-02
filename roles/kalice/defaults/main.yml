@@ -192,7 +192,9 @@ kalice_pipx_packages:
   - { name: 'pacu', url: 'https://github.com/RhinoSecurityLabs/pacu' }
   - { name: 'pre2k', url: 'https://github.com/garrettfoster13/pre2k' }
   - { name: 'pxethiefy', url: 'https://github.com/csandker/pxethiefy' }
+  - { name: 'pygpoabuse', url: 'https://github.com/Hackndo/pyGPOAbuse' }
   - { name: 'pypykatz', url: 'https://github.com/skelsec/pypykatz' }
+  - { name: 'pysnaffler', url: 'https://github.com/S3cur3Th1sSh1t/SnafflePy' }
   - { name: 'pywhat', url: 'https://github.com/bee-san/pyWhat' }
   - { name: 'pywhisker', url: 'https://github.com/ShutdownRepo/pywhisker' }
   - { name: 'relayking', url: 'https://github.com/depthsecurity/RelayKing-Depth' }

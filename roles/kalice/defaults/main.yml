@@ -180,6 +180,7 @@ kalice_pipx_packages:
   - { name: 'coercer', url: 'https://github.com/p0dalirius/Coercer' }
   - { name: 'donpapi', url: 'https://github.com/login-securite/DonPAPI' }
   - { name: 'findmeaccess', url: 'https://github.com/absolomb/FindMeAccess' }
+  - { name: 'gpoddity', url: 'https://github.com/synacktiv/GPOddity' }
   - { name: 'gpoparser', url: 'https://github.com/synacktiv/gpoParser' }
   - { name: 'h8mail', url: 'https://github.com/khast3x/h8mail' }
   - { name: 'holehe', url: 'https://github.com/megadose/holehe' }

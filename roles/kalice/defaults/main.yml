@@ -174,6 +174,7 @@ kalice_pipx_packages:
   - { name: 'adexplorersnapshot', url: 'https://github.com/c3c/ADExplorerSnapshot.py' }
   - { name: 'adidnsdump', url: 'https://github.com/dirkjanm/adidnsdump' }
   - { name: 'apachetomcatscanner', url: 'https://github.com/p0dalirius/ApacheTomcatScanner' }
+  - { name: 'bloodhound-ce-ldapx', url: 'https://github.com/An0nUD4Y/bloodhound-ldapx.py' }
   - { name: 'bloodyad', url: 'https://github.com/CravateRouge/bloodyAD' }
   - { name: 'bofhound', url: 'https://github.com/coffeegist/bofhound' }
   - { name: 'certipy', url: 'https://github.com/ly4k/Certipy' }
